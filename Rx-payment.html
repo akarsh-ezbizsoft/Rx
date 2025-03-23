@@ -3,23 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ozempic Rx UI</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-
+  <title>Ozempic Rx UI</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
   <style>
-    body {
+    body{
       background-color: #fff;
       color: #000;
     }
-    .heading {
+    .heading{
       color: #32187D;
     }
     .bg-light-gray {
@@ -41,13 +38,77 @@
       border-radius: 8px;
       padding: 10px;
       margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+    .card-option:hover, .card-option:focus-within {
+      border-color: #32187D;
+      box-shadow: 0 0 10px rgba(50, 24, 125, 0.3);
     }
     .price-card {
       border: 1px solid #ccc;
       padding: 20px;
       border-radius: 10px;
       background-color: #fff;
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+      transition: all 0.3s ease;
     }
+    .price-card:hover {
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    }
+    .pill-combo.single-btn {
+    border-radius: 30px;
+    background-color: #f1f1f1;
+    font-weight: 600;
+    padding: 10px 24px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .pill-combo.single-btn:hover {
+    background-color: #11E1D5;
+    color: #32187D;
+    box-shadow: 0 0 10px rgba(17, 225, 213, 0.5);
+  }
+    .info-list li {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .info-list i {
+      color: #32187D;
+      margin-right: 10px;
+      margin-top: 4px;
+    }
+    /* .choose-location-box {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .choose-location-box:hover {
+      border-color: #32187D;
+      box-shadow: 0 0 10px rgba(50, 24, 125, 0.3);
+    } */
+    .choose-pharmacy-box .input-group-text {
+    display: flex;     
+    align-items: center;
+    gap: 5px;
+  }
+  .choose-pharmacy-box input::placeholder {
+    color: #6c757d;
+  }
+  
+        .choose-pharmacy-box .form-control:focus {
+          border-color: #32187D;
+          /* box-shadow: 0 0 0 0.2rem rgba(50, 24, 125, 0.25); */
+        }
+      
+        
+      
+      
   </style>
 </head>
 <body>
@@ -69,23 +130,17 @@
         <label class="form-label">Brand vs. Generic</label>
         <select class="form-select bg-white">
           <option selected>Ozempic</option>
-          <option selected>Ozempic</option>
-          <option selected>Ozempic</option>
         </select>
       </div>
       <div class="col-md-3 mb-2">
         <label class="form-label">Form</label>
         <select class="form-select bg-white">
           <option selected>3ml Pen</option>
-          <option selected>3ml Pen</option>
-          <option selected>2ml Pen</option>
         </select>
       </div>
       <div class="col-md-3 mb-2">
         <label class="form-label">Dosage</label>
         <select class="form-select bg-white">
-          <option selected>2mg/3ml</option>
-          <option selected>2mg/3ml</option>
           <option selected>2mg/3ml</option>
         </select>
       </div>
@@ -93,74 +148,664 @@
         <label class="form-label">Quantity</label>
         <select class="form-select bg-white">
           <option selected>1 Count</option>
-          <option selected>1 Count</option>
-          <option selected>1 Count</option>
         </select>
       </div>
       <div class="col-md-12 mt-3">
-        <div class="input-group">
+        <!-- <div class="input-group">
           <span class="input-group-text"><i class="fa fa-location-dot"></i></span>
           <input type="text" class="form-control" placeholder="John F Kennedy Pkwy, UK">
           <button class="btn btn-outline-secondary"><i class="fa fa-chevron-down"></i></button>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- Third Row -->
+    <div class="row">
+      <!-- Left Column -->
+
+      <div class="col-md-6 mb-4">
+        <!-- Enhanced Choose Pharmacy Box -->
+
+
+       <div class="input-group choose-pharmacy-box  mb-4 p-1 rounded" style="background-color: #f0f0f0;">
+        <!-- Left Label with Icon -->
+        <span class="input-group-text bg-transparent border-end-0" style="color: #32187D;">
+          <i class="fa fa-location-dot me-2"></i>
+          <span class="fw-semibold">Choose Pharmacy</span>
+        </span>
+        
+        <!-- Input Field -->
+        <input type="text" 
+               class="form-control bg-white border-start-0 rounded-end-0" 
+               placeholder="John F Kennedy Pkwy, UK" 
+               style="border-radius: 8px 0 0 8px;">
+        
+        <!-- Right Pen Icon -->
+        <span class="input-group-text bg-white rounded-start-0" style="color: #32187D;">
+          <i class="fa fa-pen"></i>
+        </span>
+      </div>
+      
+        <!-- Card Options -->
+        <div class="d-flex flex-column gap-3">
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="icn.png" class="icon-img me-2" alt="icon">
+              <span class="text-primary fw-semibold">Costco</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="price-text fw-bold me-2">$964.99</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="icn.png" class="icon-img me-2" alt="icon">
+              <span>Albertsons</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$964.99</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="icn.png" class="icon-img me-2" alt="icon">
+              <span>Rite Aid</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,002</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="icn.png" class="icon-img me-2" alt="icon">
+              <span>Walgreens</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,029</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="icn.png" class="icon-img me-2" alt="icon">
+              <span>CVS Pharmacy</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,015</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+      </div>     
+      
+      <!-- Right Column -->
+      
+      <div class="col-md-6">
+        <div class="price-card text-center">
+          <div class="d-flex justify-content-center gap-3 mb-3">
+            <span class="pill-combo single-btn">Saving card</span>
+            <span class="pill-combo single-btn">More Option</span>
+          </div>
+          <h1 class="heading display-5 fw-bold mb-3">$25</h1>
+          <p class="fw-semibold">For OZEMPIC injection 0.5 mg, 1 mg, or 2 mg</p>
+          <button class="btn btn-custom w-100 mb-3">Get started <i class="fa fa-arrow-right ms-1"></i></button>
+          <ul class="info-list list-unstyled text-start">
+            <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
+            <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
+            <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
+          </ul>
+        </div>
+      </div>
+
+
+      
+
+    </div>
+  </div>
+
+<!-- 
+  <section class="py-4 px-2" style="background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+
+    
+    <ul class="nav nav-pills justify-content-center mb-4 flex-wrap gap-2">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Prices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Medicare</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Drug Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Learn about brand-name medications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Side Effect</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Image</a>
+      </li>
+    </ul>
+   -->
+    <!-- Accordion Section -->
+<!--      
+    <div class="accordion-container container mx-auto">
+      <h5 class="fw-bold mb-4" style="color:#32187D;">Common question about Ozempic pricing</h5>
+      
+      <div class="accordion" id="ozempicAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              How much is Ozempic without insurance?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              The price varies but can be quite high without insurance.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Does Ozempic have a Manufacturer Coupon?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Yes, some coupons may be available via official website or pharmacies.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Is there a generic for Ozempic?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Currently, there is no approved generic for Ozempic.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+              How can I save on Ozempic?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              You can look for savings cards, coupons, or talk to your doctor for options.
+            </div>
+          </div>
+        </div>
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+              Does Ozempic have a Patient Assistance Program?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              Yes, it may be available for eligible patients through Novo Nordisk.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <style>
+      .nav-pills .nav-link {
+        color: #32187D;
+        font-weight: 500;
+        border-radius: 0;
+      }
+  
+      .nav-pills .nav-link.active,
+      .nav-pills .nav-link:hover,
+      .nav-pills .nav-link:focus {
+        background-color: transparent;
+        color: #11E1D5;
+        border-bottom: 2px solid #11E1D5;
+      }
+  
+      .accordion-button {
+        color: #32187D;
+        font-weight: 500;
+        background-color: white;
+        border: none;
+      }
+  
+      .accordion-button:hover,
+      .accordion-button:focus {
+        color: #11E1D5;
+        background-color: #f0faff;
+        box-shadow: none;
+      }
+  
+      .accordion-button::after {
+        transition: transform 0.3s ease;
+      }
+  
+      .accordion-button:not(.collapsed)::after {
+        transform: rotate(180deg);
+      }
+  
+      .accordion-item {
+        border: none;
+        border-top: 1px solid #ddd;
+      }
+  
+      .accordion-body {
+        color: #333;
+      }
+  
+      .accordion-container {
+        max-width: 700px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.05);
+      }
+    </style>
+  
+     -->
+
+     <!-- Bootstrap 5 Accordion & Nav Layout Section -->
+<section class="py-5" style="background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
+  <div class="container">
+
+    <!-- Navigation Tabs -->
+    <ul class="nav nav-pills justify-content-center mb-4 flex-wrap gap-2 custom-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Prices</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Medicare</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Drug Info</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Learn about brand-name medications</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Side Effect</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Image</a>
+      </li>
+    </ul>
+
+    <!-- Section Title -->
+    <h5 class="fw-bold mb-4 text-center" style="color:#32187D;">
+      Common question about Ozempic pricing
+    </h5>
+
+    <!-- Bootstrap 5 Accordion -->
+    <div class="accordion" id="ozempicAccordion">
+      <div class="accordion-item border-top">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            How much is Ozempic without insurance?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+          <div class="accordion-body">
+            The price varies but can be quite high without insurance.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-top">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Does Ozempic have a Manufacturer Coupon?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+          <div class="accordion-body">
+            Yes, some coupons may be available via official site or partners.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-top">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Is there a generic for Ozempic?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+          <div class="accordion-body">
+            No generic is currently available for Ozempic.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-top">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            How can I save on Ozempic?
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+          <div class="accordion-body">
+            Try savings cards, discount programs, or ask your provider.
+          </div>
+        </div>
+      </div>
+
+      <div class="accordion-item border-top">
+        <h2 class="accordion-header" id="headingFive">
+          <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+            Does Ozempic have a Patient Assistance Program?
+          </button>
+        </h2>
+        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+          <div class="accordion-body">
+            Yes, eligible users can apply through Novo Nordisk support.
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Third Row - Prices and Card -->
-    <div class="row">
-      <!-- Left Column -->
-      <div class="col-md-6">
-        <div class="card-option d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-            <img src="icn.png" class="icon-img me-2">
-            <span class="text-primary fw-semibold">Costco</span>
-          </div>
-          <div class="d-flex align-items-center">
-            <span class="price-text fw-bold me-2">$964.99</span>
-            <i class="fa fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="card-option d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-            <i class="fa fa-store me-2"></i>
-            <span>Albertsons</span>
-          </div>
-          <div class="d-flex align-items-center">
-            <span class="fw-bold me-2">$964.99</span>
-            <i class="fa fa-chevron-right"></i>
-          </div>
-        </div>
-        <div class="card-option d-flex align-items-center justify-content-between">
-          <div class="d-flex align-items-center">
-            <i class="fa fa-store me-2"></i>
-            <span>Rite Aid</span>
-          </div>
-          <div class="d-flex align-items-center">
-            <span class="fw-bold me-2">$1,002</span>
-            <i class="fa fa-chevron-right"></i>
+  </div>
+
+  <!-- Custom Hover Styles -->
+  <style>
+    .custom-tabs .nav-link {
+      color: #32187D;
+      font-weight: 500;
+      border-radius: 0;
+    }
+
+    .custom-tabs .nav-link.active,
+    .custom-tabs .nav-link:hover,
+    .custom-tabs .nav-link:focus {
+      color: #11E1D5;
+      background-color: transparent;
+      border-bottom: 2px solid #11E1D5;
+    }
+
+    .custom-accordion-btn {
+      color: #32187D;
+      font-weight: 500;
+      background-color: #fff;
+      box-shadow: none;
+    }
+
+    .custom-accordion-btn:hover,
+    .custom-accordion-btn:focus {
+      color: #11E1D5;
+      background-color: #f5faff;
+    }
+  </style>
+
+ 
+ 
+</section>
+
+
+<!-- 
+<section class="py-5" style="background-color: #f1f1f1;">
+  <div class="container">
+    <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5>
+
+    <div class="row g-4 mb-5">
+      <div class="col-md-4">
+        <div class="card shadow p-3 h-100 border-0">
+          <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">Ozempic is a brand-name medication</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
           </div>
         </div>
       </div>
 
-      <!-- Right Column -->
-      <div class="col-md-6">
-        <div class="price-card">
-          <div class="d-flex justify-content-between align-items-center mb-3">
-            <button class="btn btn-light">Saving card</button>
-            <button class="btn btn-outline-secondary">More Option</button>
+      <div class="col-md-4">
+        <div class="card shadow p-3 h-100 border-0">
+          <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding</p>
           </div>
-          <h2 class="heading">$25</h2>
-          <p>For OZEMPIC injection 0.5 mg, 1 mg, or 2 mg</p>
-          <button class="btn btn-custom w-100 mb-2">Get started <i class="fa fa-arrow-right ms-1"></i></button>
-          <ul class="small ps-3">
-            <li>Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
-            <li>Month defined as 28 days, offer good for up to 48 months</li>
-            <li>For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
-          </ul>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow p-3 h-100 border-0">
+          <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h5 class="fw-bold mb-4" style="color: #32178D;">Other GLP-1 agonists</h5>
+
+    <div class="row g-3">
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Adlyxin</span>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Bydureon</span>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Byetta</span>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Rybelsus</span>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Saxenda</span>
+        </div>
+      </div>
+      <div class="col-6 col-sm-4 col-md-2">
+        <div class="card shadow text-center p-3 border-0">
+          <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+          <span style="color: #32178D;">Tanzeum</span>
         </div>
       </div>
     </div>
   </div>
+</section> -->
+
+<!-- 
+<section class="py-5" style="background-color: #f1f1f1;">
+  <div class="container">
+    <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5> -->
+<!-- 
+    <div class="row g-4 mb-5">
+      <div class="col-md-4 d-flex">
+        <div class="card shadow p-3 border-0 w-100 d-flex flex-column">
+          <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0 mt-auto">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">Ozempic is a brand-name medication</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card shadow p-3 border-0 w-100 d-flex flex-column">
+          <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0 mt-auto">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 d-flex">
+        <div class="card shadow p-3 border-0 w-100 d-flex flex-column">
+          <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
+          <div class="card-body p-0 mt-auto">
+            <h6 class="card-title fw-semibold" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
+            <p class="card-text" style="color: #000;">Rx Discount Hub prescriptions by finding</p>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+  
+
+<!-- 
+
+     <section class="py-5" style="background-color: #f1f1f1;">
+      <div class="container">
+        <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5>
+    
+        <div class="row g-4 mb-5">
+          <div class="col-md-4 d-flex">
+            <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+              <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
+              <div class="card-body mt-auto p-0">
+                <h6 class="card-title fw-semibold" style="color: #32178D;">Ozempic is a brand-name  medication</h6>
+                <p class="card-text" style="color: #32178D;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4 d-flex">
+            <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+              <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
+              <div class="card-body mt-auto p-0">
+                <h6 class="card-title fw-semibold" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
+                <p class="card-text" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+              </div>
+            </div>
+          </div>
+    
+          <div class="col-md-4 d-flex">
+            <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+              <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
+              <div class="card-body mt-auto p-0">
+                <h6 class="card-title fw-semibold" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
+                <p class="card-text" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <h5 class="fw-bold mb-4" style="color: #32178D;">Other GLP-1 agonists</h5>
+        <div class="row g-3">
+      
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Adlyxin</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Bydureon</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Byetta</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Rybelsus</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Saxenda</span>
+            </div>
+          </div>
+          <div class="col-6 col-sm-4 col-md-2">
+            <div class="card shadow text-center p-3 border-0 h-100">
+              <img src="icon.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+              <span style="color: #32178D;">Tanzeum</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+       -->
+
+
+       <section class="py-5" style="background-color: #f1f1f1;">
+        <div class="container">
+          <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5>
+      
+          <div class="row g-4 mb-5">
+            <!-- CARD 1 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Ozempic is a brand-name medication</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- CARD 2 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+                </div>
+              </div>
+            </div>
+      
+            <!-- CARD 3 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
