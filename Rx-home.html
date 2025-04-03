@@ -23,9 +23,11 @@
     
  
  }
+
+ 
 .navbar-custom {
             /* background-color: #5232Af; */
-            background-color:  #5A41A4;
+            background-color:  #4b2ea0;
 
             border-radius: 20px; /* Rounded border */
             /* padding: 10px 20px;  */
@@ -57,7 +59,9 @@
             width: 100%; /* Expand underline on hover */
         }
         .navbar-custom .navbar-toggler {
-            background-color: #32187D; /* Hamburger menu background */
+            background-color: #32187D; 
+            border-radius: 25px;
+            
         }
         .btn-custom {
             color: white;
@@ -81,18 +85,20 @@
     <!-- header css -->
     <style>
         .header-section {
-            background-color: #5232Af;
+            /* background-color: #5232Af; */
             color: white;
-            padding: 40px 0;
+            padding: 10px 0;
             text-align: center;
-            /* margin-top: 60px; */
+            margin-top: 60px;
             position: relative;
             z-index: 2;
+            padding-bottom:0px;
         }
 
 
         /* Search Bar */
-        .search-bar {
+          /* wrong one  */
+        /* .search-bar {
             background-color: white;
             border-radius: 50px;
             padding: 5px 6px;
@@ -104,9 +110,25 @@
             position: relative;
             bottom:2rem;
             z-index: 3;
-        }
+        } */
+/* 
+        .search-bar {
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: 31px; 
+  z-index: 3;
+}
+
         .search-bar i {
-            /* color: #666; */
+          
             color:#32187D;
             font-size: 14px;
             margin-right: 8px;
@@ -121,41 +143,105 @@
         }
         .search-bar button {
             background-color: #11E1D5;
-            /* color: blue; */
+           
             color:#32187D;
             border-radius: 20px;
             padding: 8px 15px;
             border: none;
             margin-left: 10px;
-            font-weight: 700;
-        }
-
-
-        /* .curve-section {
-            background-color: #32187D;
-            border-radius: 50% 50% 0 0;
-            padding: 85px 0 50px;
-            text-align: center;
-            position: relative;
-            margin-top: -80px;
-            z-index: 1;
+            font-weight: 500;
         } */
 
 
-        .curve-section {
-    background-color: #32187D;
-    border-radius: 50% 51% 0 0;
-    padding: 85px 0 50px;
-    text-align: center;
-    position: relative;
-    margin-top: -80px;
-    width: 100%;
-    min-height: 220px; /* Adjust height for a better oval shape */
-    /* display: flex;
+        .search-bar {
+    background-color: white;
+    border-radius: 50px;
+    padding: 5px 6px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; */
+    width: 50%;
+    margin: 0 auto;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 31px;
+    z-index: 3;
 }
+
+.search-bar i {
+    color: #32187D;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-weight: bold;
+    color: black;
+}
+
+.search-bar button {
+    background-color: #11E1D5;
+    color: #32187D;
+    border-radius: 20px;
+    padding: 8px 15px;
+    border: none;
+    margin-left: 10px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* Custom Arrow Icon */
+.arrow-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+/* Corner Icon Positioned Outside Top-Right */
+.corner-icon {
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    z-index: 4;
+}
+
+
+
+
+
+
+.curve-section {
+  position: relative;
+  padding: 120px 0 50px;
+  text-align: center;
+  overflow: hidden;
+  background: transparent;
+  z-index: 1;
+}
+
+.curve-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150vw; 
+  height: 150vw;
+  background-color: #32187D;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+
 
        .carousel-inner img {
             width: 70%;
@@ -164,13 +250,13 @@
         .popular-drugs-title {
             font-size: 1.5rem;
             font-weight: 500;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .popular-drugs-list {
             display: flex;
             justify-content: center;
             gap: 40px;
-            margin-bottom: 20px;
+            margin-bottom: 45px;
         }
         .popular-drug {
             background: #44297B;
@@ -178,6 +264,10 @@
             border-radius: 20px;
             font-weight: normal;
         }
+
+        .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
     </style>  
 
     <!-- header section -->
@@ -185,7 +275,7 @@
 <div class="wrapper">
 
     
-<div style=" background-color: #5232Af;
+<div style=" background-color: #4521AB;
 color: white;" class="pt-3">
 
 <nav class="navbar navbar-expand-lg navbar-custom container-fluid" >
@@ -226,30 +316,44 @@ color: white;" class="pt-3">
 </nav>
 
 
-
-
 <section class="header-section">
-<!-- <h2>Affordable medications made easy</h2> -->
-<h2 data-aos="fade-up" data-aos-delay="200">Affordable medications made easy</h2>
 
-<p >Compare prices & <span style="color: #11E1D5;">save up to 80%</span></p>
+<h2 data-aos="fade-up" data-aos-delay="200" style="font-size:35px;">Affordable medications made easy</h2>
+
+<p style="font-size:20px;" >Compare prices & <span style="color: #11E1D5;">save up to 80%</span></p>
 </section>
 
 
 
-<!-- <div class="search-bar"> -->
+<!-- 
     <div class="search-bar" data-aos="zoom-in" data-aos-delay="300">
 
     <i class="bi bi-search pt-1 ps-1 text-black fs-6" style="font-weight: bolder;"></i>
     <input type="text"  placeholder="Enter drug name (ex. Amoxicillin)">
     <button>Find lowest prices <i class="bi bi-arrow-right"></i></button>
+</div> -->
+
+
+<div class="search-bar" data-aos="zoom-in" data-aos-delay="300">
+    <i class="bi bi-search pt-1 ps-1 text-black fs-6" style="font-weight: bolder;"></i>
+    <input type="text" placeholder="Enter drug name (ex. Amoxicillin)">
+    <button>
+        Find lowest prices 
+        <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon">
+    </button>
+
+    <!-- Decorative corner icon -->
+    <img src="./Rx/iconB.png" alt="Corner Icon" class="corner-icon">
 </div>
+
+
 <div class="curve-section">
 
 <div class="popular-drugs-title">Most Popular drugs</div>
 <!-- 
 <div class="popular-drugs-list"> -->
-    <div class="popular-drugs-list" data-aos="fade-up" data-aos-delay="400">
+    <!-- <div class="popular-drugs-list" data-aos="fade-up" data-aos-delay="400"> -->
+     <div class="popular-drugs-list">         
 
 <div class="popular-drug">Ozempic</div>
 <div class="popular-drug">Zepbound</div>
@@ -261,13 +365,13 @@ color: white;" class="pt-3">
 
 <div class="carousel-inner">
     <div class="carousel-item active">
-        <img src="./1.jpg" class="d-block w-70 mx-auto" alt="Popular Drug">
+        <img src="./Rx/slider1.png" class="d-block w-70 mx-auto" alt="Popular Drug">
     </div>
     <div class="carousel-item">
-        <img src="./1.jpg" class="d-block w-70 mx-auto" alt="Popular Drug">
+        <img src="./Rx/slider 2.png" class="d-block w-70 mx-auto" alt="Popular Drug">
     </div>
     <div class="carousel-item">
-        <img src="./1.jpg" class="d-block w-70 mx-auto" alt="Popular Drug">
+        <img src="./Rx/slider 3.png" class="d-block w-70 mx-auto" alt="Popular Drug">
     </div>
 </div>
 <div class="carousel-indicators">
@@ -277,6 +381,10 @@ color: white;" class="pt-3">
 </div>
 </div>
 </div>
+
+
+
+
 
 </div>
 
@@ -362,114 +470,194 @@ color: white;" class="pt-3">
 
 <!-- pharmacy section -->
 
+
+
 <style>
-    /* Section Styling */
-    .pharmacy-section {
-        background-color: #E4F7FB;
-        padding: 30px 20px;
-        text-align: center;
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
-        border-top: 50%;
-        position: relative;
-        
-        overflow: hidden; /* Prevents any overflow caused by absolute positioning */
-    }
+            /* Pharmacy Section with Top Dome Curve */
+.pharmacy-section {
+    position: relative;
+    padding: 70px 20px 30px;
+    text-align: center;
+    overflow: hidden;
+    background: transparent; /* So the curve color shows */
+    z-index: 1;
+}
 
-    /* Number and Subtext Styling */
+/* Top Dome Background using ::before */
+.pharmacy-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 211vw;
+    height: 135vw;
+    background-color: #E4F7FB; /* Your actual background color */
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Stats */
+.pharmacy-stats h2 {
+    color: #002677;
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.pharmacy-stats p {
+    color: #002677;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Available At Text */
+.available-at {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #002677;
+    margin-top: 85px;
+}
+.available-at span {
+    color: #11E1DF;
+}
+
+/* Placeholder Images */
+.placeholder-img {
+    position: absolute;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+}
+
+/* Left Image - Half Outside the Top Left Curve */
+.left-img {
+    top: 14px;
+    left: -2px;
+    width: 300px;
+    z-index: 3;
+}
+
+/* Right Image - Vertically Centered at Right */
+.right-img {
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 250px;
+    z-index: 3;
+}
+
+/* Container Content Above Dome */
+.pharmacy-stats-container {
+    position: relative;
+    z-index: 4;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Pharmacy Logos */
+.pharmacy-logos img {
+    max-width: 125px;
+    height: auto;
+    margin: 20px;
+}
+
+/* Responsive */
+/* @media (max-width: 768px) {
     .pharmacy-stats h2 {
-        color: #32187D;
-        font-size: 3rem;
-        font-weight: bold;
+        font-size: 2.2rem;
     }
-
     .pharmacy-stats p {
-        color: #32187D;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
-
-    /* Available At Text */
     .available-at {
-        font-size: 1.8rem;
-        font-weight: bold;
-        color: #32187D;
-        margin-top: 50px; /* Creates space before Available at */
+        font-size: 1.5rem;
     }
-
-    .available-at span {
-        color: #11E1DF;
-    }
-
-    /* Image Styling */
-    .placeholder-img {
-        position: absolute;
-        max-width: 100%;
-        height: auto;
-        object-fit: contain;
-    }
-
-    /* Left Placeholder Image (Enlarged and Positioned Upwards) */
-    .left-img {
-        top: -100px;
-        left: -40px;
-        width: 250px;
-    }
-
-  
-    /* Right Placeholder Image (Enlarged and Positioned at Bottom) */
-    .right-img {
-        bottom: -80px;
-        right: -30px;
-        width: 250px;
-    }
-
-    /* Center Align Stats */
-    .pharmacy-stats-container {
-        position: relative;
-        z-index: 2;
-        margin: 0 auto;
-        max-width: 600px;
-    }
-
-    /* Pharmacy Logo Styling */
     .pharmacy-logos img {
-        max-width: 120px;
-        height: auto;
-        margin: 10px;
+        max-width: 90px;
     }
+    .left-img {
+        top: -80px;
+        left: -40px;
+        width: 200px;
+    }
+    .right-img {
+        width: 200px;
+        right: -10px;
+    }
+} */
 
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-        .pharmacy-stats h2 {
-            font-size: 2.2rem;
-        }
-        .pharmacy-stats p {
-            font-size: 1rem;
-        }
-        .available-at {
-            font-size: 1.5rem;
-        }
-        .pharmacy-logos img {
-            max-width: 90px;
-        }
-        .left-img {
-            top: -80px;
-            left: -20px;
-            width: 180px;
-        }
-        .right-img {
-            bottom: -60px;
-            right: -20px;
-            width: 180px;
-        }
-    }
+
+@media (max-width: 767px) {
+  .pharmacy-section {
+    padding: 100px 10px 40px;
+  }
+
+  .pharmacy-section::before {
+    width: 300vw;
+    height: 200vw;
+  }
+
+  .pharmacy-stats h2 {
+    font-size: 2rem;
+  }
+
+  .pharmacy-stats p {
+    font-size: 0.85rem;
+  }
+
+  .available-at {
+    font-size: 1.3rem;
+    margin-top: 60px;
+  }
+
+  .pharmacy-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .pharmacy-logos .col-auto {
+    flex: 0 0 45%; /* Two logos per row */
+    display: flex;
+    justify-content: center;
+  }
+
+  .pharmacy-logos img {
+    max-width: 100px;
+    margin: 10px 0;
+  }
+
+  .left-img {
+    top: -60px;
+    left: -30px;
+    width: 180px;
+  }
+
+  .right-img {
+    top: auto;
+    bottom: -20px;
+    right: -10px;
+    width: 180px;
+    transform: none;
+  }
+
+  .pharmacy-stats-container {
+    max-width: 100%;
+  }
+}
+
+
 </style>
 
 
 <!-- Pharmacy Section -->
 <section class="pharmacy-section">
     <!-- Left Image Placeholder (Enlarged & Moved Outwards) -->
-    <img src="./Rx/p1.png" alt="Left Placeholder" class="placeholder-img left-img">
+    <img src="./Rx/Layer_1.png" alt="Left Placeholder" class="placeholder-img left-img">
     
     <div class="container">
         <div class="row justify-content-center">
@@ -620,11 +808,11 @@ color: white;" class="pt-3">
     .custom-card {
         background-color: white;
         border: none;
-        border-radius: 10px;
+        border-radius: 20px;
         text-align: center;
         color: #32187D;
         padding: 10px; /* Reduced padding */
-        width: 220px; /* Adjusted width */
+        /* width: 220px;  */
         margin: auto;
     }
 
@@ -647,7 +835,7 @@ color: white;" class="pt-3">
     }
 
     .rotate-card {
-        transform: rotate(5deg);
+        transform: rotate(10deg);
     }
 </style>
 
@@ -699,7 +887,7 @@ color: white;" class="pt-3">
     </div>
 </div>
 
-<!-- footer section -->
+<!-- footer bottom section -->
         <style>
             body {
                 /* font-family: Arial, sans-serif; */
@@ -711,7 +899,8 @@ color: white;" class="pt-3">
 
 
             .top-articles {
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
+    background-color: #f7f7f4;
     /* padding-top: 20px;   */
     padding-bottom: 40px; 
     border-top-left-radius: 40px;
@@ -719,7 +908,7 @@ color: white;" class="pt-3">
 }
             .section-title {
                 color: #32187D;
-                font-weight: bold;
+                font-weight: 500;
                 margin-bottom: 0; /* No extra gap */
             }
             .card {
@@ -743,7 +932,7 @@ color: white;" class="pt-3">
             }
             .card-body h5 {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 500;
   
 }
 .card {
@@ -756,16 +945,17 @@ height: 100%; /* Ensures equal height */
 flex-grow: 1; /* Makes all cards the same height */
 }
 
+
             .card-body hr {
                 border: none;
-                height: 2px;
-                background: #444; /* Dark HR */
+                height: 1px;
+                background: #ccc6c4; /* Dark HR */
                 width: 100%;
                 margin: 10px 0;
             }
             .date-badge {
-                background-color: #ddd; /* Light Gray */
-                color: black;
+                background-color: #f5f5f5; /* Light Gray */
+                color: gray;
                 font-size: 12px;
                 padding: 5px 10px;
                 border-radius: 20px;
@@ -783,13 +973,14 @@ flex-grow: 1; /* Makes all cards the same height */
                 gap: 10px;
             }
             .badge-custom {
-                color: gray;
+                color: #89818B;
                 border: 1px solid gray;
                 background-color: white;
                 padding: 12px 20px; /* Increased size */
                 border-radius: 20px;
                 font-size: 14px;
                 text-align: center;
+                font-weight:normal;
                 flex: 1; /* Makes them stretch evenly */
                 text-wrap: nowrap;
             }
@@ -806,8 +997,8 @@ flex-grow: 1; /* Makes all cards the same height */
             .hr-divider {
                 border: none;
                 height: 2px;
-                background: gray;
-                width: 80%; /* Container width */
+                background: #ccc6c4;
+                width: 86%; /* Container width */
                 margin: 20px auto;
             }
             .alphabet-container {
@@ -822,12 +1013,13 @@ flex-grow: 1; /* Makes all cards the same height */
                 justify-content: center;
                 align-items: center;
                 text-decoration: none;
-                color: #32187D;
-                font-size: 22px; /* Increased font size */
+                color: #002677;
+                font-size: 16px; /* Increased font size */
                 width: 50px; /* Increased size */
-                height: 50px; /* Increased size */
+                height: 48px; /* Increased size */
                 border-radius: 50%;
-                background: #ddd;
+                border: 0.5px solid #002677;
+                background: transparent;
                 transition: all 0.3s ease;
             }
             .alphabet-container a:hover {
@@ -889,12 +1081,12 @@ flex-grow: 1; /* Makes all cards the same height */
     <div class="trending-topics">
         <div class="container">
             <div class="trending-header">
-                <h2 class="section-title">Trending Topics</h2>
+                <h2 class="section-title">Trending topics</h2>
                 <span class="badge badge-custom">Paxlovid rebound</span>
                 <span class="badge badge-custom">OTC Sore throat remedies</span>
                 <span class="badge badge-custom">2025 GLP-1 Trends</span>
                 <span class="badge badge-custom">Covid</span>
-                <span class="badge badge-custom">20+</span>
+                <span class="badge badge-custom" >20+</span>
             </div>
         </div>
     </div>
@@ -905,7 +1097,7 @@ flex-grow: 1; /* Makes all cards the same height */
     <!-- Browse Medications Section -->
     <div class="browse-medications ">
         <div class="container">
-            <h2 class="section-title ">Browse Medications</h2>
+            <h2 class="section-title ">Browse medications</h2>
             <p>Research prescriptions and over-the-counter medication from A to Z, compare drug prices, and start saving.</p>
             <div class="alphabet-container">
                 <a href="#">A</a>
@@ -939,7 +1131,7 @@ flex-grow: 1; /* Makes all cards the same height */
         </div>
     </div>
     
-    <!-- footer section -->
+    <!-- footer  section -->
      
   <style>
     /* Main Footer */
@@ -947,6 +1139,19 @@ flex-grow: 1; /* Makes all cards the same height */
     .footer ul li {
   padding-bottom: 16px; /* space between list items */
 }
+
+.icon-img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+.footer{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
 
 .footer ul li:last-child {
   padding-bottom: 0; /* remove bottom padding on last item */
@@ -958,7 +1163,7 @@ flex-grow: 1; /* Makes all cards the same height */
     }
     .footer h5 {
       color: #11E1D5;
-      font-weight: bold;
+      font-weight: 500;
       margin-bottom: 15px;
     }
     .footer a {
@@ -984,18 +1189,47 @@ flex-grow: 1; /* Makes all cards the same height */
     }
 
     /* Sub-Footer */
-    .sub-footer {
+
+    /* .sub-footer {
       background-color: #4F2FAC;
-      /* padding: 20px 0; */
+      padding: 20px 0;
       color: white;
-    }
+    } */
+
+    /* .footer-inner {
+  width: 95%;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #5A41A4; 
+} */
+
+.sub-footer {
+  background-color:  #4521AB;
+  color: white;
+  padding: 25px 0;
+  /* margin-bottom: 30px; */
+}
 
 
+.footer-inner {
+  width: 97%;
+  margin: 0 auto;
+  padding: 0px 20px; /* Add more padding at the top and bottom */
+  border-radius: 20px;
+  background-color: #4b2ea0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures equal space at top and bottom */
+  align-items: center; /* Center content horizontally */
+  min-height: 170px; /* Ensure a minimum height */
+}
 
-    .subscribe-box input {
+     .subscribe-box input {
       border-radius: 50px;
       padding: 8px 15px;
       border: none;
+      width:74%;
     }
     .subscribe-box button {
       border-radius: 50px;
@@ -1007,7 +1241,8 @@ flex-grow: 1; /* Makes all cards the same height */
     }
     .subscribe-box button:hover {
       background-color: #0bb3a5;
-    }
+    } 
+     
     .footer-bottom-nav {
       background-color: #eee;
       color: black;
@@ -1028,17 +1263,19 @@ flex-grow: 1; /* Makes all cards the same height */
         margin: 5px 0;
       }
     }
+
+  
   </style>
 
 <!-- Footer Section -->
 <footer>
   <!-- Main Footer -->
-  <div class="footer" style="background-color: #5232AF; color: white; padding: 18px 0;">
+  <div class="footer" style="background-color: #4521AB; color: white; padding: 18px 0;">
     <div class="container">
       <div class="row">
         <!-- Column 1 -->
         <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
-          <img src="./Rx/Rx-Discount.png" alt="Logo" class="footer-logo mb-3" style="width: 66px;">
+          <img src="./Rx/Group 1041.png" alt="Logo" class="footer-logo mb-2" style="width: 30px;">
           <h5 class="text-info">RX Discount HUb</h5>
           <ul class="list-unstyled">
             <li><a href="#">About us</a></li>
@@ -1052,7 +1289,8 @@ flex-grow: 1; /* Makes all cards the same height */
         <!-- Column 2 -->
         <div class="col-md-3 mb-4 mb-md-0">
           <div class="mb-2">
-            <i class="fa fa-pills fa-2x text-white" style="font-size: 30px;"></i>
+            <!-- <i class="fa fa-pills fa-2x text-white" style="font-size: 30px;"></i> -->
+            <img src="./Rx/Vector.png" alt="Pills Icon" class="icon-img">
           </div>
           <h5 class="text-info">Browse drugs by</h5>
           <ul class="list-unstyled mt-3">
@@ -1067,7 +1305,7 @@ flex-grow: 1; /* Makes all cards the same height */
         <!-- Column 3 -->
         <div class="col-md-3 mb-4 mb-md-0">
           <div class="mb-2">
-            <i class="fa fa-shield-halved fa-2x text-white"  style="font-size: 30px;"></i>
+            <i class="fa fa-shield-halved fa-2x text-white"  style="font-size: 26px;"></i>
           </div>
           <h5 class="text-info">Legal</h5>
           <ul class="list-unstyled mt-3">
@@ -1084,7 +1322,7 @@ flex-grow: 1; /* Makes all cards the same height */
         <!-- Column 4 -->
         <div class="col-md-3">
           <div class="mb-2">
-            <i class="fa fa-headset fa-2x text-white"  style="font-size: 30px;"></i>
+            <i class="fa fa-headset fa-2x text-white"  style="font-size: 26px;"></i>
           </div>
           <h5 class="text-info">Support</h5>
           <ul class="list-unstyled mt-3">
@@ -1110,7 +1348,7 @@ flex-grow: 1; /* Makes all cards the same height */
   
   <!-- Sub-Footer Section -->
 
-
+<!-- 
   <div class="sub-footer" style="background-color: #4F2FAC; color: white; padding: 25px 0;">
     <div class="container">
       <div class="row align-items-center text-center text-md-start">
@@ -1140,8 +1378,40 @@ flex-grow: 1; /* Makes all cards the same height */
       </div>
     </div>
   </div>
+ -->
 
-
+ <div class="sub-footer" style=" color: white;">
+    <div class="footer-inner"> <!-- NEW WRAPPER WITH BORDER-RADIUS -->
+      <div class="container">
+        <div class="row align-items-center text-center text-md-start">
+          
+          <div class="col-md-7 mb-4 mb-md-2">
+            <h6 class="mb-2" style="color: #11E1D5; font-size: 20px;">Sign up for our newsletter</h6>
+            <form class="d-flex flex-wrap justify-content-center justify-content-md-start align-items-center gap-2 subscribe-box">
+              <input type="email" class="form-control" placeholder="Email address" />
+              <button type="submit" class="btn">
+                <i class="fa fa-paper-plane me-2"></i>Subscribe
+              </button>
+            </form>
+          </div>
+    
+          <div class="col-md-5 text-md-end" style="font-size: 13px;">
+            <div class="d-flex flex-column align-items-center align-items-md-end gap-2">
+              <div>
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                <span class="ms-md-2">English (United States) <i class="fa fa-globe ms-1"></i></span>
+              </div>
+              <p class="mb-0">Copyright &copy; 2025 Rx Discount Hub, Inc.</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  </div>
+  
  
 </footer>
 
