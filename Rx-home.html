@@ -76,13 +76,17 @@
         .btn-custom i {
             margin-left: 5px; /* Add spacing before the arrow icon */
         }
-
+       
+        .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
 
     </style>
     </head>
 
 
     <!-- header css -->
+
     <style>
         .header-section {
             /* background-color: #5232Af; */
@@ -95,68 +99,29 @@
             padding-bottom:0px;
         }
 
+        @media (max-width: 575px) {
+           
+            .header-section h2 {
+                font-size: 30px; /* Smaller font size for mobile */
+                margin-top: -10px;
+            }
+
+            .header-section p {
+                font-size: 16px; /* Smaller font size for mobile */
+                margin-bottom: -35px;
+            }
+        }
+
+
+
+
 
         /* Search Bar */
-          /* wrong one  */
-        /* .search-bar {
-            background-color: white;
-            border-radius: 50px;
-            padding: 5px 6px;
-            display: flex;
-            align-items: center;
-            width: 50%;
-            margin: 20px auto;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: relative;
-            bottom:2rem;
-            z-index: 3;
-        } */
-/* 
-        .search-bar {
-  background-color: white;
-  border-radius: 50px;
-  padding: 5px 6px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50%;
-  margin: 0 auto;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  top: 31px; 
-  z-index: 3;
-}
-
-        .search-bar i {
-          
-            color:#32187D;
-            font-size: 14px;
-            margin-right: 8px;
-        }
-        .search-bar input {
-            border: none;
-            outline: none;
-            flex: 1;
-            padding: 8px;
-            font-weight: bold;
-            color: black;
-        }
-        .search-bar button {
-            background-color: #11E1D5;
-           
-            color:#32187D;
-            border-radius: 20px;
-            padding: 8px 15px;
-            border: none;
-            margin-left: 10px;
-            font-weight: 500;
-        } */
-
-
+     
         .search-bar {
     background-color: white;
     border-radius: 50px;
-    padding: 5px 6px;
+    padding: 0px 4px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +130,16 @@
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
     top: 31px;
+   
     z-index: 3;
+}
+
+@media (max-width: 575px) {
+    .search-bar {
+        
+        top: 60px; /* Adjusted for mobile */
+        margin-bottom: -20px;
+    }
 }
 
 .search-bar i {
@@ -196,6 +170,10 @@
     gap: 6px;
 }
 
+
+
+
+
 /* Custom Arrow Icon */
 .arrow-icon {
     width: 16px;
@@ -215,6 +193,69 @@
 }
 
 
+/* search bar media query  for mobile and some desktop minimal changes*/
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #f8f8f8;
+    border-radius: 30px;
+    padding: 6px 12px;
+    flex: 1;
+}
+
+.input-wrapper i {
+    color: #32187D;
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.input-wrapper input {
+    border: none;
+    outline: none;
+    background: transparent;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: black;
+}
+
+@media (max-width: 575px) {
+  .search-bar {
+    flex-direction: column;
+    align-items: stretch;
+    width: 95%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 35px;
+    background-color: transparent;
+  }
+
+  .input-wrapper {
+    padding: 6px 10px;
+    border-radius: 20px;
+  }
+
+  .input-wrapper input {
+    height: 36px;
+    font-size: 13px;
+  }
+
+  .search-bar button {
+    width: 70%;
+    padding: 10px 14px;
+    font-size: 13px;
+    border-radius: 25px;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .search-bar .corner-icon {
+    display: none;
+  }
+}
+
+
+/* curve section = drugs list + carousel */
 
 
 
@@ -265,9 +306,64 @@
             font-weight: normal;
         }
 
-        .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+
+        /* media query for curve section */
+
+        /* Tablet view (≤ 991px) */
+@media (max-width: 991px) {
+  .popular-drugs-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px 20px;
+  }
+
+  .popular-drug {
+    width: 45%;
+    text-align: center;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .carousel-inner img {
+    width: 85% !important;
+    margin-top: 20px;
+  }
+
+  .carousel-indicators {
+    bottom: -10px;
+  }
 }
+
+/* Mobile view (≤ 575px) */
+@media (max-width: 575px) {
+  .popular-drugs-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px 10px;
+    margin-bottom: 30px;
+  }
+
+  .popular-drug {
+    width: 40%;
+    font-size: 13px;
+    padding: 6px 8px;
+  }
+
+  .carousel-inner img {
+    width: 97% !important;
+    margin-top: 15px;
+    border-radius: 8px;
+    /* height: 90%; */
+  }
+
+  .carousel-indicators {
+    bottom: -15px;
+  }
+}
+
+
     </style>  
 
     <!-- header section -->
@@ -316,23 +412,16 @@ color: white;" class="pt-3">
 </nav>
 
 
-<section class="header-section">
 
+
+<section class="header-section">
 <h2 data-aos="fade-up" data-aos-delay="200" style="font-size:35px;">Affordable medications made easy</h2>
 
 <p style="font-size:20px;" >Compare prices & <span style="color: #11E1D5;">save up to 80%</span></p>
 </section>
 
 
-
 <!-- 
-    <div class="search-bar" data-aos="zoom-in" data-aos-delay="300">
-
-    <i class="bi bi-search pt-1 ps-1 text-black fs-6" style="font-weight: bolder;"></i>
-    <input type="text"  placeholder="Enter drug name (ex. Amoxicillin)">
-    <button>Find lowest prices <i class="bi bi-arrow-right"></i></button>
-</div> -->
-
 
 <div class="search-bar" data-aos="zoom-in" data-aos-delay="300">
     <i class="bi bi-search pt-1 ps-1 text-black fs-6" style="font-weight: bolder;"></i>
@@ -342,9 +431,28 @@ color: white;" class="pt-3">
         <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon">
     </button>
 
-    <!-- Decorative corner icon -->
+
+    <img src="./Rx/iconB.png" alt="Corner Icon" class="corner-icon">
+</div> -->
+
+
+<div class="search-bar" data-aos="zoom-in" data-aos-delay="300">
+    <div class="input-wrapper">
+        <i class="bi bi-search pt-1 ps-1 text-black fs-6" style="font-weight: bolder;"></i>
+        <input type="text" placeholder="Enter drug name (ex. Amoxicillin)">
+    </div>
+
+    <button>
+        Find lowest prices 
+        <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon">
+    </button>
+
     <img src="./Rx/iconB.png" alt="Corner Icon" class="corner-icon">
 </div>
+
+
+
+
 
 
 <div class="curve-section">
@@ -592,7 +700,7 @@ color: white;" class="pt-3">
 
 @media (max-width: 767px) {
   .pharmacy-section {
-    padding: 100px 10px 40px;
+    padding: 64px 10px 40px;
   }
 
   .pharmacy-section::before {
@@ -610,7 +718,7 @@ color: white;" class="pt-3">
 
   .available-at {
     font-size: 1.3rem;
-    margin-top: 60px;
+    margin-top: 35px;
   }
 
   .pharmacy-logos {
@@ -632,7 +740,7 @@ color: white;" class="pt-3">
   }
 
   .left-img {
-    top: -60px;
+    top: -3px;
     left: -30px;
     width: 180px;
   }
@@ -642,6 +750,7 @@ color: white;" class="pt-3">
     bottom: -20px;
     right: -10px;
     width: 180px;
+    z-index: -1;
     transform: none;
   }
 
@@ -738,8 +847,8 @@ color: white;" class="pt-3">
         .curve-right {
             position: absolute;
             left: 473px;
-            bottom: -72px;
-            width: 100%;
+            bottom: -94px;
+            width: 133%;
         }
        
         @media (max-width: 768px) {
@@ -751,36 +860,65 @@ color: white;" class="pt-3">
                 right: -10px;
                 bottom: -20px;
                 width: 100px;
+                
             }
+
         }
+
+         .rx-coupon {
+              
+            padding-bottom: 5.3rem;
+              
+         }
+
+         @media (max-width: 575px) {
+            .rx-coupon {
+                padding-bottom: 0rem;
+            }
+          
+         }
+      
     </style>
 </head>
 <body>
 
-<div class="container " style="padding-bottom: 3.3rem;">
+  <div class="container rx-coupon">
     <div class="row align-items-center">
-        <!-- Left Side - Image with Curves -->
-        <!-- <div class="col-lg-6 position-relative text-center text-lg-start"> -->
-            <div class="col-lg-6 text-center text-lg-start" data-aos="fade-left" data-aos-delay="300">
-
-            <!-- <img src="./Rx/line3.png" alt="Curve Left" class="curve-left"> -->
-            <img src="./Rx/discount.png" alt="Discount Coupons" class="discount-img">
-            <img src="./Rx/line-2.png" alt="Curve Right" class="curve-right"> <!-- Corrected placement -->
+  
+      <!-- DESKTOP LAYOUT: Show Image First -->
+      <div class="col-lg-6 d-none d-lg-block text-center text-lg-start" data-aos="fade-left" data-aos-delay="300">
+        <img src="./Rx/3.png" alt="Discount Coupons" class="discount-img img-fluid mb-3">
+        <img src="./Rx/line-2.png" alt="Curve Right" class="curve-right img-fluid">
+      </div>
+  
+      <!-- TEXT SECTION: All screen sizes -->
+      <div class="col-lg-6 text-center text-lg-start">
+        
+        <!-- 1. Heading & Subheading -->
+        <div class="order-1">
+          <h2 class="main-heading">Rx discount hub</h2>
+          <h3 class="sub-heading">Helps You Save with Prescription Coupons</h3>
         </div>
-
-        <!-- Right Side - Text Content -->
-        <div class="col-lg-6 text-center text-lg-start">
-            <h2 class="main-heading">Rx discount hub</h2>
-            <h3 class="sub-heading">Helps You Save with Prescription Coupons</h3>
-            <p class="text-light-black">
-                Rx Discount Hub helps you save up to 80% on prescriptions by finding the best local discounts.
-                Prices vary between pharmacies—even across the street. Whether you’re uninsured, underinsured,
-                or seeking a better deal than your co-pay, search now for free Rx coupons and start saving!
-            </p>
+  
+        <!-- 2. IMAGE: Show ONLY on mobile/tablet -->
+        <div class="d-block d-lg-none my-3" data-aos="fade-left" data-aos-delay="300">
+          <img src="./Rx/3.png" alt="Discount Coupons" class="discount-img img-fluid mb-2">
+          <img src="./Rx/line-2.png" alt="Curve Right" class="curve-right img-fluid">
         </div>
+  
+        <!-- 3. Paragraph -->
+        <div class="order-3 mt-2">
+          <p class="text-light-black">
+            Rx Discount Hub helps you save up to 80% on prescriptions by finding the best local discounts.
+            Prices vary between pharmacies—even across the street. Whether you’re uninsured, underinsured,
+            or seeking a better deal than your co-pay, search now for free Rx coupons and start saving!
+          </p>
+        </div>
+  
+      </div>
     </div>
-</div>
-
+  </div>
+  
 
 
 
@@ -816,6 +954,24 @@ color: white;" class="pt-3">
         margin: auto;
     }
 
+    @media (max-width: 575px) {
+        .custom-card {
+            margin-bottom:5px;
+        }
+      
+        .main-heading-custom {
+        font-size: 18px;
+        
+    }
+
+    .sub-heading-custom {
+       
+        font-size: 25px;
+        
+    }
+
+
+    }
     .custom-card img {
         width: 40px; /* Reduced icon size */
         height: 40px;
@@ -909,7 +1065,7 @@ color: white;" class="pt-3">
             .section-title {
                 color: #32187D;
                 font-weight: 500;
-                margin-bottom: 0; /* No extra gap */
+                margin-bottom: 0; 
             }
             .card {
                 border: none;
@@ -1030,12 +1186,28 @@ flex-grow: 1; /* Makes all cards the same height */
               
                font-size: 25px;
            }
+
+          
+
+           @media (max-width:575px) {
+            .alpha-section {
+                font-size: 15px; /* Reduced font size for mobile */
+                 padding-top: 15px;
+              
+                
+            }
+
+            .section-custom{
+                   margin-top: -42px;
+                  padding-bottom: 14px;
+            }
+           }
         </style>
    
     <!-- Top Articles Section -->
     <div class="top-articles">
         <div class="container">
-            <h2 class="section-title text-center">Top Articles</h2>
+            <h2 class="section-title text-md-center text-center ">Top Articles</h2>
             <div class="row mt-4">
                 <div class="col-md-4">
                     <!-- <div class="card p-3"> -->
@@ -1053,7 +1225,7 @@ flex-grow: 1; /* Makes all cards the same height */
                     <!-- <div class="card p-3"> -->
                         <div class="card p-3" data-aos="fade-up" data-aos-delay="100">
 
-                        <img src="./Rx/image-2.png" alt="Article Image">
+                        <img src="./Rx/Group 1052.png" alt="Article Image">
                         <div class="card-body">
                             <h5 class="card-title">Hawaii lawmakers approve cannabis bill</h5>
                             <hr>
@@ -1081,7 +1253,9 @@ flex-grow: 1; /* Makes all cards the same height */
     <div class="trending-topics">
         <div class="container">
             <div class="trending-header">
-                <h2 class="section-title">Trending topics</h2>
+              <div class="w-100">
+                <h2 class="section-title section-custom text-center  text-md-start">Trending topics</h2>
+                </div>
                 <span class="badge badge-custom">Paxlovid rebound</span>
                 <span class="badge badge-custom">OTC Sore throat remedies</span>
                 <span class="badge badge-custom">2025 GLP-1 Trends</span>
@@ -1097,9 +1271,9 @@ flex-grow: 1; /* Makes all cards the same height */
     <!-- Browse Medications Section -->
     <div class="browse-medications ">
         <div class="container">
-            <h2 class="section-title ">Browse medications</h2>
-            <p>Research prescriptions and over-the-counter medication from A to Z, compare drug prices, and start saving.</p>
-            <div class="alphabet-container">
+            <h2 class="section-title text-md-start text-center">Browse medications</h2>
+            <p class="alpha-section" >Research prescriptions and over-the-counter medication from A to Z, compare drug prices, and start saving.</p>
+            <div class="alphabet-container  justify-content-center justify-content-md-start">
                 <a href="#">A</a>
                 <a href="#">B</a>
                 <a href="#">C</a>
@@ -1274,7 +1448,7 @@ flex-grow: 1; /* Makes all cards the same height */
     <div class="container">
       <div class="row">
         <!-- Column 1 -->
-        <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
+        <div class="col-md-3  mb-4 mb-md-0">
           <img src="./Rx/Group 1041.png" alt="Logo" class="footer-logo mb-2" style="width: 30px;">
           <h5 class="text-info">RX Discount HUb</h5>
           <ul class="list-unstyled">
