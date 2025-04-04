@@ -16,7 +16,7 @@
   <style>
 
     body{
-      background-color: #fff;
+      /* background-color: #fff; */
       color: #000;
     }
     .heading{
@@ -54,7 +54,11 @@
       border-color: #32187D;
       box-shadow: 0 0 10px rgba(50, 24, 125, 0.3);
     }
-    .price-card {
+
+
+    /* right end column */
+
+    /* .price-card {
       border: 1px solid #ccc;
       padding: 20px;
       border-radius: 10px;
@@ -89,19 +93,74 @@
       margin-right: 10px;
       margin-top: 4px;
     }
-    /* .choose-location-box {
-      border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 15px;
-    }
-    .choose-location-box:hover {
-      border-color: #32187D;
-      box-shadow: 0 0 10px rgba(50, 24, 125, 0.3);
-    } */
+     */
+    
+
+     /* Badge container styling */
+/* Badge Wrapper like one capsule */
+/* Badge Container */
+.badge-wrapper {
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  overflow: hidden; /* ensure the pill shape stays perfect */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons inside the badge */
+.badge-btn {
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Left and right border-radius to make it pill-shaped */
+.left-btn {
+  border-radius: 40px 0 0 40px;
+}
+.right-btn {
+  border-radius: 0 40px 40px 0;
+}
+
+/* Hover effect */
+.badge-btn:hover {
+  background-color: #fff;
+  border-color: #32187D;
+  color: #002677;
+}
+
+/* Price card */
+.price-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.price-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Info list */
+.info-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+.info-list i {
+  color: #32187D;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+
+
+    /* left column choose pharmacy box */
+    
     .choose-pharmacy-box .input-group-text {
     display: flex;     
     align-items: center;
@@ -113,7 +172,7 @@
   
         .choose-pharmacy-box .form-control:focus {
           border-color: #32187D;
-          /* box-shadow: 0 0 0 0.2rem rgba(50, 24, 125, 0.25); */
+         
         }
       
         
@@ -183,7 +242,7 @@
           margin-left: 5px; /* Add spacing before the arrow icon */
       }
 
-
+  
   </style>
   
     
@@ -255,48 +314,48 @@
     </div>
     
     <!-- Second Row - Inputs -->
-    <div class="row bg-light-gray p-3 rounded mb-4">
+
+<div class="row mb-4">
+  <!-- <div class="col-md-12 offset-md-0 mx-auto"> -->
+     <div class="col-md-12  mx-auto" style="max-width: 98%;">
+    <div class="row bg-light-gray p-3 rounded ">
       <div class="col-md-3 mb-2">
         <label class="form-label">Brand vs. Generic</label>
         <select class="form-select bg-white">
           <option selected>Ozempic</option>
-          <option selected>Ozempic</option>
-          <option selected>Ozempic</option>
+          <option>Generic</option>
+          <option>Other</option>
         </select>
       </div>
       <div class="col-md-3 mb-2">
         <label class="form-label">Form</label>
         <select class="form-select bg-white">
           <option selected>3ml Pen</option>
-          <option selected>3ml Pen</option>
-          <option selected>3ml Pen</option>
+          <option>5ml Pen</option>
+          <option>10ml Pen</option>
         </select>
       </div>
       <div class="col-md-3 mb-2">
         <label class="form-label">Dosage</label>
         <select class="form-select bg-white">
           <option selected>2mg/3ml</option>
-          <option selected>2mg/3ml</option>
-          <option selected>2mg/3ml</option>
+          <option>1mg/3ml</option>
+          <option>0.5mg/3ml</option>
         </select>
       </div>
       <div class="col-md-3 mb-2">
         <label class="form-label">Quantity</label>
         <select class="form-select bg-white">
           <option selected>1 Count</option>
-          <option selected>1 Count</option>
-          <option selected>1 Count</option>
-          <option selected>1 Count</option>
+          <option>2 Count</option>
+          <option>3 Count</option>
         </select>
       </div>
-      <div class="col-md-12 mt-3">
-        <!-- <div class="input-group">
-          <span class="input-group-text"><i class="fa fa-location-dot"></i></span>
-          <input type="text" class="form-control" placeholder="John F Kennedy Pkwy, UK">
-          <button class="btn btn-outline-secondary"><i class="fa fa-chevron-down"></i></button>
-        </div> -->
-      </div>
     </div>
+  </div>
+</div>
+
+
 
     <!-- Third Row -->
     <div class="row">
@@ -390,7 +449,7 @@
       
       <!-- Right Column -->
       
-       <div class="col-md-6">
+       <!-- <div class="col-md-6">
         <div class="price-card text-center">
           <div class="d-flex justify-content-center gap-3 mb-3">
             <span class="pill-combo single-btn">Saving card</span>
@@ -406,167 +465,36 @@
           </ul>
         </div>
       </div>
- 
- 
+  -->
+  <div class="col-md-6 d-flex flex-column justify-content-between">
+    <!-- Full-width badge-style buttons -->
+    <div class="badge-wrapper d-flex mb-3 w-100">
+      <span class="badge-btn left-btn flex-fill text-center">Saving card</span>
+      <span class="badge-btn right-btn flex-fill text-center">More Option</span>
+    </div>
+  
+    <!-- Price Card -->
+    <div class="price-card text-center">
+      <h1 class="heading display-5 fw-bold mb-3">$25</h1>
+      <p class="fw-semibold">For OZEMPIC injection 0.5 mg, 1 mg, or 2 mg</p>
+    </div>
+  
+    <!-- CTA Button -->
+    <button class="btn btn-custom2 w-100 my-3">Get started <i class="fa fa-arrow-right ms-1"></i></button>
+  
+    <!-- Info List -->
+    <ul class="info-list list-unstyled text-start mt-2">
+      <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
+      <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
+      <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
+    </ul>
+  </div>
+  
 
     </div>
   </div>
 
-<!-- 
-  <section class="py-4 px-2" style="background-color: #f9f9f9; font-family: 'Segoe UI', sans-serif;">
 
-    
-    <ul class="nav nav-pills justify-content-center mb-4 flex-wrap gap-2">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Prices</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Medicare</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Drug Info</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Learn about brand-name medications</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Side Effect</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Image</a>
-      </li>
-    </ul>
-   -->
-    <!-- Accordion Section -->
-<!--      
-    <div class="accordion-container container mx-auto">
-      <h5 class="fw-bold mb-4" style="color:#32187D;">Common question about Ozempic pricing</h5>
-      
-      <div class="accordion" id="ozempicAccordion">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingOne">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-              How much is Ozempic without insurance?
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              The price varies but can be quite high without insurance.
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-              Does Ozempic have a Manufacturer Coupon?
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Yes, some coupons may be available via official website or pharmacies.
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-              Is there a generic for Ozempic?
-            </button>
-          </h2>
-          <div id="collapseThree" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Currently, there is no approved generic for Ozempic.
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFour">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-              How can I save on Ozempic?
-            </button>
-          </h2>
-          <div id="collapseFour" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              You can look for savings cards, coupons, or talk to your doctor for options.
-            </div>
-          </div>
-        </div>
-        
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="headingFive">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
-              Does Ozempic have a Patient Assistance Program?
-            </button>
-          </h2>
-          <div id="collapseFive" class="accordion-collapse collapse">
-            <div class="accordion-body">
-              Yes, it may be available for eligible patients through Novo Nordisk.
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-  
-    <style>
-      .nav-pills .nav-link {
-        color: #32187D;
-        font-weight: 500;
-        border-radius: 0;
-      }
-  
-      .nav-pills .nav-link.active,
-      .nav-pills .nav-link:hover,
-      .nav-pills .nav-link:focus {
-        background-color: transparent;
-        color: #11E1D5;
-        border-bottom: 2px solid #11E1D5;
-      }
-  
-      .accordion-button {
-        color: #32187D;
-        font-weight: 500;
-        background-color: white;
-        border: none;
-      }
-  
-      .accordion-button:hover,
-      .accordion-button:focus {
-        color: #11E1D5;
-        background-color: #f0faff;
-        box-shadow: none;
-      }
-  
-      .accordion-button::after {
-        transition: transform 0.3s ease;
-      }
-  
-      .accordion-button:not(.collapsed)::after {
-        transform: rotate(180deg);
-      }
-  
-      .accordion-item {
-        border: none;
-        border-top: 1px solid #ddd;
-      }
-  
-      .accordion-body {
-        color: #333;
-      }
-  
-      .accordion-container {
-        max-width: 700px;
-        background: #fff;
-        padding: 30px;
-        border-radius: 12px;
-        box-shadow: 0 0 15px rgba(0,0,0,0.05);
-      }
-    </style>
-  
-     -->
 
      <!-- Bootstrap 5 Accordion & Nav Layout Section -->
 <section class="py-5" style=" font-family: 'Segoe UI', sans-serif;">
@@ -761,7 +689,7 @@
                     Rx Discount Hub prescriptions by finding the best local discounts.
                   </p>
                 </div>
-              </div>
+              </div> 
             </div>
           
             <!-- CARD 2 -->
@@ -965,6 +893,8 @@ padding-bottom: 0; /* remove bottom padding on last item */
 
 
 <style>
+
+
   body {
       /* font-family: Arial, sans-serif; */
   }
