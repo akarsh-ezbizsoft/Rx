@@ -29,24 +29,34 @@
       color: #32187D;
     }
    .btn-custom2 {
-      /* background-color: #11E1D5;
-      color: #32187D; */
-      background-color: blue;
-      color: #fff;
-      border-radius:20px;
+     background-color: #11E1D5; 
+      color: #32187D;
+       border-radius: 50px;
+      padding: 8px;
     } 
+  
     .btn-custom2:hover {
-       background-color: #11E1D5;
-      color: #32187D; 
+       background-color: #f7f7f4;
+      color: #11E1D5; 
+      border: 1px solid #32178D;
     }
+
+    
+
+    .arrow-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-bottom:  3px;
+}
     .icon-img {
-      width: 28px;
-      height: 28px;
+      width: 50px;
+      height: 55px;
     }
     .card-option {
       border: 1px solid #ccc;
-      border-radius: 8px;
-      padding: 10px;
+      border-radius: 20px;
+      padding: 13px;
       margin-bottom: 10px;
       transition: all 0.3s ease;
     }
@@ -58,50 +68,12 @@
 
     /* right end column */
 
-    /* .price-card {
-      border: 1px solid #ccc;
-      padding: 20px;
-      border-radius: 10px;
-      background-color: #fff;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
-      transition: all 0.3s ease;
-    }
-    .price-card:hover {
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
-    }
-    .pill-combo.single-btn {
-    border-radius: 30px;
-    background-color: #f1f1f1;
-    font-weight: 600;
-    padding: 10px 24px;
-    font-size: 1rem;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  .pill-combo.single-btn:hover {
-    background-color: #11E1D5;
-    color: #32187D;
-    box-shadow: 0 0 10px rgba(17, 225, 213, 0.5);
-  }
-    .info-list li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: flex-start;
-    }
-    .info-list i {
-      color: #32187D;
-      margin-right: 10px;
-      margin-top: 4px;
-    }
-     */
-    
-
      /* Badge container styling */
 /* Badge Wrapper like one capsule */
 /* Badge Container */
 .badge-wrapper {
   background-color: #f5f5f5;
-  border-radius: 40px;
+  border-radius: 20px;
   overflow: hidden; /* ensure the pill shape stays perfect */
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
 }
@@ -119,10 +91,12 @@
 
 /* Left and right border-radius to make it pill-shaped */
 .left-btn {
-  border-radius: 40px 0 0 40px;
+  border-radius: 20px 20px 20px 20px;
+  
 }
 .right-btn {
-  border-radius: 0 40px 40px 0;
+  border-radius: 20px 20px 20px 20px;
+  
 }
 
 /* Hover effect */
@@ -146,37 +120,91 @@
 }
 
 /* Info list */
+
+
+.info-container {
+  border: 1px solid #ddd; /* Light border around the container */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+ 
+}
+
 .info-list li {
   margin-bottom: 8px;
   display: flex;
   align-items: flex-start;
+  color: #666; /* Lighter color for the text */
 }
+
 .info-list i {
   color: #32187D;
   margin-right: 10px;
   margin-top: 4px;
 }
 
+.info-footer {
+  margin-top: 20px;
+  color: #666; /* Lighter color for footer text */
+  font-size: 0.9rem;
+}
+
+.footer-image {
+  width: auto;
+  height: 50px; /* Set a fixed height for image */
+  margin-top: 10px;
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+  .info-container {
+    padding: 15px;
+  }
+
+  .footer-image {
+    height: 40px; /* Adjust image height for smaller screens */
+  }
+}
 
 
     /* left column choose pharmacy box */
     
     .choose-pharmacy-box .input-group-text {
-    display: flex;     
+    display: flex;
     align-items: center;
     gap: 5px;
-  }
-  .choose-pharmacy-box input::placeholder {
+    padding: 12px 15px;
+    border: none;  /* Remove any border */
+}
+
+.choose-pharmacy-box .input-group-text.bg-transparent {
+    border-left: none; /* Remove left border of label */
+    padding-right: 10px; /* Added space between label and input */
+}
+
+.choose-pharmacy-box input {
+    padding: 12px 15px;  /* Increased padding inside the input */
+    border: none;  /* Remove border from the input */
+    border-radius: 8px 0 0 8px;  /* Ensures rounded corners for input */
+    
+}
+
+.choose-pharmacy-box input::placeholder {
     color: #6c757d;
-  }
-  
-        .choose-pharmacy-box .form-control:focus {
-          border-color: #32187D;
-         
-        }
-      
-        
-      
+}
+
+.choose-pharmacy-box .form-control:focus {
+    border-color: #32187D;
+    box-shadow: none; /* Remove focus shadow */
+}
+
+/* Pen icon inside input group */
+.choose-pharmacy-box .input-group-text.bg-white {
+    border-left: none;  /* Ensure no border between pen icon and input */
+}
+
+
+     
+
       
   </style>
 </head>
@@ -355,7 +383,10 @@
   </div>
 </div>
 
+<style>
 
+
+</style>
 
     <!-- Third Row -->
     <div class="row">
@@ -365,25 +396,30 @@
         <!-- Enhanced Choose Pharmacy Box -->
 
 
-       <div class="input-group choose-pharmacy-box  mb-4 p-1 rounded" style="background-color: #f0f0f0;">
+       <div class="input-group choose-pharmacy-box mb-4 p-1 rounded" style="background-color: #f0f0f0;">
         <!-- Left Label with Icon -->
-        <span class="input-group-text bg-transparent border-end-0" style="color: #32187D;">
-          <i class="fa fa-location-dot me-2"></i>
-          <span class="fw-semibold">Choose Pharmacy</span>
+        <span class="input-group-text bg-transparent border-end-0" style="color: #32187D; padding-right: 10px;">
+            <i class="fa fa-location-dot me-2"></i>
+            <span class="fw-semibold">Choose Pharmacy</span>
         </span>
         
         <!-- Input Field -->
         <input type="text" 
                class="form-control bg-white border-start-0 rounded-end-0" 
                placeholder="John F Kennedy Pkwy, UK" 
-               style="border-radius: 8px 0 0 8px;">
+               style="border-radius: 8px 0 0 8px;  border-radius:12px;">
         
         <!-- Right Pen Icon -->
-        <span class="input-group-text bg-white rounded-start-0" style="color: #32187D;">
-          <i class="fa fa-pen"></i>
+        <span class="input-group-text bg-white rounded-start-0" style="color: #32187D; border-radius:12px;">
+            <i class="fa fa-pen"></i>
         </span>
-      </div>
-      
+    </div>
+    
+
+
+
+
+
         <!-- Card Options -->
         <div class="d-flex flex-column gap-3">
           <div class="card-option d-flex align-items-center justify-content-between">
@@ -448,24 +484,7 @@
       </div>     
       
       <!-- Right Column -->
-      
-       <!-- <div class="col-md-6">
-        <div class="price-card text-center">
-          <div class="d-flex justify-content-center gap-3 mb-3">
-            <span class="pill-combo single-btn">Saving card</span>
-            <span class="pill-combo single-btn">More Option</span>
-          </div>
-          <h1 class="heading display-5 fw-bold mb-3">$25</h1>
-          <p class="fw-semibold">For OZEMPIC injection 0.5 mg, 1 mg, or 2 mg</p>
-          <button class="btn btn-custom2 w-100 mb-3">Get started <i class="fa fa-arrow-right ms-1"></i></button>
-          <ul class="info-list list-unstyled text-start">
-            <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
-            <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
-            <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
-          </ul>
-        </div>
-      </div>
-  -->
+   
   <div class="col-md-6 d-flex flex-column justify-content-between">
     <!-- Full-width badge-style buttons -->
     <div class="badge-wrapper d-flex mb-3 w-100">
@@ -480,14 +499,29 @@
     </div>
   
     <!-- CTA Button -->
-    <button class="btn btn-custom2 w-100 my-3">Get started <i class="fa fa-arrow-right ms-1"></i></button>
+    <button class="btn btn-custom2 w-100 my-3">Get started  <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon"></button>
   
     <!-- Info List -->
-    <ul class="info-list list-unstyled text-start mt-2">
+    <!-- <ul class="info-list list-unstyled text-start mt-2">
       <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
       <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
       <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
-    </ul>
+    </ul> -->
+
+    <div class="info-container">
+      <ul class="info-list list-unstyled text-start mt-2">
+        <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
+        <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
+        <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
+      </ul>
+    
+      <!-- Additional Text -->
+      <p class="info-footer">© 2024 Novo Nordisk All rights reserved. US24OZM00873</p>
+    
+      <!-- Small Image below Text -->
+      <img src="./Rx/image 32.png" alt="Novo Nordisk" class="footer-image">
+    </div>
+    
   </div>
   
 
