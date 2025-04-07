@@ -1,0 +1,1802 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ozempic Rx UI</title><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  
+      <!-- headee section 2 row css -->
+  <style>
+
+    body{
+      /* background-color: #fff; */
+      color: #000;
+    }
+    .heading{
+      color: #32187D;
+    }
+    .bg-light-gray {
+      background-color: #f0f0f0;
+    }
+    .price-text {
+      color: #32187D;
+    }
+   .btn-custom2 {
+     background-color: #11E1D5; 
+      color: #32187D;
+       border-radius: 50px;
+      padding: 8px;
+    } 
+  
+    .btn-custom2:hover {
+       background-color: #f7f7f4;
+      color: #11E1D5; 
+      border: 1px solid #32178D;
+    }
+
+    
+
+    .arrow-icon {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    margin-bottom:  3px;
+}
+    .icon-img2 {
+      width: 50px;
+      height: 55px;
+    }
+    .card-option {
+      border: 1px solid #ccc;
+      border-radius: 20px;
+      padding: 13px;
+      margin-bottom: 10px;
+      transition: all 0.3s ease;
+    }
+    .card-option:hover, .card-option:focus-within {
+      border-color: #32187D;
+      box-shadow: 0 0 10px rgba(50, 24, 125, 0.3);
+    }
+
+
+    /* right end column */
+
+     /* Badge container styling */
+/* Badge Wrapper like one capsule */
+/* Badge Container */
+.badge-wrapper {
+  background-color: #f5f5f5;
+  border-radius: 20px;
+  overflow: hidden; /* ensure the pill shape stays perfect */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Buttons inside the badge */
+.badge-btn {
+  padding: 12px 0;
+  font-weight: 600;
+  font-size: 1rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Left and right border-radius to make it pill-shaped */
+.left-btn {
+  border-radius: 20px 20px 20px 20px;
+  
+}
+.right-btn {
+  border-radius: 20px 20px 20px 20px;
+  
+}
+
+/* Hover effect */
+.badge-btn:hover {
+  background-color: #fff;
+  border-color: #32187D;
+  color: #002677;
+}
+
+/* Price card */
+.price-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+.price-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Info list */
+
+
+.info-container {
+  border: 1px solid #ddd; /* Light border around the container */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  margin-bottom: 37px;    
+ 
+}
+
+.info-list li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+  color: #666; /* Lighter color for the text */
+}
+
+.info-list i {
+  color: #32187D;
+  margin-right: 10px;
+  margin-top: 4px;
+}
+
+.info-footer {
+  margin-top: 20px;
+  color: #666; /* Lighter color for footer text */
+  font-size: 0.9rem;
+}
+
+.footer-image {
+  width: auto;
+  height: 50px; /* Set a fixed height for image */
+  margin-top: 10px;
+}
+
+/* Make sure the layout is responsive */
+@media (max-width: 768px) {
+  .info-container {
+    padding: 15px;
+  }
+
+  .footer-image {
+    height: 40px; /* Adjust image height for smaller screens */
+  }
+}
+
+
+    /* left column choose pharmacy box */
+    
+    .choose-pharmacy-box .input-group-text {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 12px 15px;
+    border: none;  /* Remove any border */
+}
+
+.choose-pharmacy-box .input-group-text.bg-transparent {
+    border-left: none; /* Remove left border of label */
+    padding-right: 10px; /* Added space between label and input */
+}
+
+.choose-pharmacy-box input {
+    padding: 12px 15px;  /* Increased padding inside the input */
+    border: none;  /* Remove border from the input */
+    border-radius: 8px 0 0 8px;  /* Ensures rounded corners for input */
+    
+}
+
+.choose-pharmacy-box input::placeholder {
+    color: #6c757d;
+}
+
+.choose-pharmacy-box .form-control:focus {
+    border-color: #32187D;
+    box-shadow: none; /* Remove focus shadow */
+}
+
+/* Pen icon inside input group */
+.choose-pharmacy-box .input-group-text.bg-white {
+    border-left: none;  /* Ensure no border between pen icon and input */
+}
+
+
+     
+
+      
+  </style>
+</head>
+<body>
+
+
+  <!-- navbar style -->
+  <style>
+  
+ 
+.navbar-custom {
+            /* background-color: #5232Af; */
+            background-color:  #4b2ea0;
+
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            /* padding: 10px 20px;  */
+              width:100%;
+              /* margin-top: 5px; */
+              padding-left: 10px;
+          
+        }
+        .navbar-custom .nav-link {
+            color: white; /* Nav link text color */
+            position: relative;
+            margin: 0 10px; /* Spacing between nav links */
+        }
+        .navbar-custom .nav-link:hover {
+            color: #11E1D5; /* Hover text color */
+        }
+        .navbar-custom .nav-link::after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background-color: #11E1D5; /* Underline hover color */
+            position: absolute;
+            bottom: -5px; /* Slightly lower underline */
+            left: 0;
+            transition: width 0.3s ease;
+        }
+        .navbar-custom .nav-link:hover::after {
+            width: 100%; /* Expand underline on hover */
+        }
+        .navbar-custom .navbar-toggler {
+            background-color: #32187D; 
+            border-radius: 25px;
+            
+        }
+        .btn-custom {
+            color: white;
+            border-color: white;
+            border-radius: 50px;
+        }
+        .btn-custom:hover {
+            background-color: #11E1D5; /* Button hover color */
+            color: #5232Af;
+            /* border:none; */
+        }
+        .btn-custom i {
+            margin-left: 5px; /* Add spacing before the arrow icon */
+        }
+       
+        .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* offcanvass mobile css */
+
+
+  
+
+  .offcanvas-custom {
+    background-color: #32187D;
+    color: white;
+    width: 330px !important;
+  }
+
+  .offcanvas-custom a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  .menu-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+text-decoration: none;
+padding: 10px 15px;
+margin-bottom: 5px;
+border-radius: 5px;
+transition: background-color 0.3s ease;
+width: 100%;
+position: relative;
+}
+
+.menu-item:hover {
+background-color: rgba(255, 255, 255, 0.1);
+}
+
+.menu-item-left {
+display: flex;
+align-items: center;
+gap: 10px;
+}
+
+.menu-item-right {
+position: absolute;
+right: 3px;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.menu-item i {
+min-width: 20px;
+text-align: center;
+}
+
+.badge-new {
+background-color: #fff;
+color: #32187D;
+font-size: 0.65rem;
+font-weight: bold;
+padding: 2px 6px;
+border-radius: 6px;
+margin-left: 5px;
+}
+
+  .offcanvas-custom a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .offcanvas-header, .offcanvas-body {
+    color: white;
+  }
+
+  .btn-outline-light {
+    border-color: white;
+    color: white;
+    border-radius: 50px;
+  }
+
+  .btn-outline-light:hover {
+    background-color: white;
+    color: #32187D;
+  }
+
+  .badge-new {
+    background-color: #fff;
+    color: #32187D;
+    font-size: 0.65rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 6px;
+  }
+
+  .divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+  }
+
+  .try-box {
+    background-color: #fff;
+    color: #32187D;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    padding: 8px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .try-box i {
+    color: #32187D;
+    margin-bottom: 24px;
+  }
+
+  .try-box-text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+  }
+
+  .login-btns {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .offcanvas-body a i.float-end {
+    margin-top: 4px;
+  }
+
+  
+  </style>
+  
+  
+<nav class="navbar navbar-expand-lg navbar-custom container-fluid">
+  <div class="container-fluid d-flex justify-content-between align-items-center">
+    
+    <!-- Logo -->
+    <a class="navbar-brand text-white" href="#">
+      <img src="./Rx/Rx-Discount.png" alt="Logo" style="width: 150px; height: auto; border-radius: 8px; padding-left: 1rem;">
+    </a>
+
+    <!-- Hamburger Icon (Only on Mobile, triggers offcanvas) -->
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileOffcanvas" aria-controls="mobileOffcanvas" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Desktop Navbar (Only visible on desktop) -->
+    <div class="collapse navbar-collapse d-none d-lg-flex" id="navbarNav">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Prescription Saving</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">Health Info</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="#">How It Works</a>
+        </li>
+        <li class="nav-item" style="padding-right: 1rem;">
+          <button class="btn btn-outline-light btn-custom" type="button">
+            Sign Up / Sign In <i class="bi bi-arrow-right"></i>
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Offcanvas for Mobile -->
+<div class="offcanvas offcanvas-end offcanvas-custom" tabindex="-1" id="mobileOffcanvas" aria-labelledby="mobileOffcanvasLabel">
+
+ 
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasRightLabel">Rx Discount Hub</h5>
+    <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+
+    <!-- Sign up / Log in buttons -->
+    <div class="login-btns mb-3">
+      <button class="btn btn-light text-dark w-50" style="border-radius:50px;">Sign up</button>
+      <button class="btn btn-outline-light w-50">Log in</button>
+    </div>
+
+    <!-- Try Box -->
+    <div class="try-box">
+      <div class="try-box-text">
+        <i class="fas fa-user-md"></i>
+        <span>Try GoodRx for healthcare <br> professionals</span>
+      </div>
+      <i class="fas fa-times small" role="button"></i>
+    </div>
+
+
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-home"></i> Home
+      </span>
+    </a>
+    
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-prescription-bottle-alt"></i> Prescription savings
+      </span>
+      <i class="fas fa-chevron-right menu-item-right"></i>
+    </a>
+    
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-video"></i> Telehealth
+      </span>
+      <i class="fas fa-chevron-right menu-item-right"></i>
+    </a>
+    
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-notes-medical"></i> Health info
+      </span>
+      <i class="fas fa-chevron-right menu-item-right"></i>
+    </a>
+    
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-star"></i> Gold membership
+      </span>
+      <i class="fas fa-chevron-right menu-item-right"></i>
+    </a>
+    
+    <a href="#" class="menu-item">
+      <span class="menu-item-left">
+        <i class="fas fa-paw"></i> Pets <span class="badge-new">New</span>
+      </span>
+      <i class="fas fa-chevron-right menu-item-right"></i>
+    </a>
+    
+
+
+    <div class="divider"></div>
+
+    <a href="#">How GoodRx works</a>
+    <a href="#">Pharmacies near you</a>
+    <a href="#">Health conditions</a>
+    <a href="#">Get a prescription savings card</a>
+    <a href="#">Get the GoodRx app</a>
+    <a href="#">Earn GoodRx Rewards</a>
+
+    <div class="divider"></div>
+
+    <a href="#"><i class="fas fa-question-circle me-2"></i> Help and FAQs</a>
+  </div>
+  
+
+</div>
+
+<style>
+
+@media (max-width: 767.98px) {
+  .container .mob-centric {
+    justify-content: center !important;
+    align-items: center !important;
+    /* text-align: center; */
+    display: flex;
+    flex-direction: column;
+  }
+}
+</style>
+
+
+  <!-- medication section -->
+  <div class="container py-4" style="margin-top: 6px;">
+    <!-- First Row -->
+    <div class="row mb-4 mob-centric ">
+      <div class="col-md-2">
+        <img src="./Rx/9.png" alt="med" class="img-fluid">
+      </div>
+    <div class="col-md-10 mb-4">
+      <h4 class="heading fw-bold">
+        Ozempic
+        <br />
+        <span style="color:#32178D; margin-top: 4px; display: inline-block; " class="fw-normal">
+          (semaglutide) Injection
+        </span>
+      </h4>
+      <p class="mb-0 text-dark">
+        Ozempic is an injectable prescription medication used with diet and exercise to improve blood sugar control in adults with Type 2 diabetes. It is also commonly prescribed off-label 
+        <span style="color:#32178D;" class="fw-bold">
+          Read more <i class="fa-solid fa-chevron-down ms-1"></i>
+        </span>
+      </p>
+    </div>
+    
+    <!-- order layout code  -->
+<!--     
+     <div class="row mb-4 mob-centric">
+      
+      <div class="col-md-10 mb-4 order-1 order-md-2">
+        <h4 class="heading fw-bold">
+          Ozempic
+          <br />
+          <span style="color:#32178D; margin-top: 4px; display: inline-block;" class="fw-normal">
+            (semaglutide) Injection
+          </span>
+        </h4>
+      </div>
+    
+  
+      <div class="col-md-2 order-2 order-md-1">
+        <img src="./Rx/9.png" alt="med" class="img-fluid">
+      </div>
+    
+      
+      <div class="col-12 order-3 order-md-3">
+        <p class="mb-0 text-dark">
+          Ozempic is an injectable prescription medication used with diet and exercise to improve blood sugar control in adults with Type 2 diabetes. It is also commonly prescribed off-label 
+          <span style="color:#32178D;" class="fw-bold">
+            Read more <i class="fa-solid fa-chevron-down ms-1"></i>
+          </span>
+        </p>
+      </div>
+    </div>
+     -->
+
+    <!-- Second Row - Inputs -->
+
+<div class="row mb-4 mob-centric ">
+  <!-- <div class="col-md-12 offset-md-0 mx-auto"> -->
+     <div class="col-md-12  mx-auto" style="max-width: 98%;">
+    <div class="row bg-light-gray p-3 rounded ">
+      <div class="col-md-3 mb-2">
+        <label class="form-label">Brand vs. Generic</label>
+        <select class="form-select bg-white">
+          <option selected>Ozempic</option>
+          <option>Generic</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-2">
+        <label class="form-label">Form</label>
+        <select class="form-select bg-white">
+          <option selected>3ml Pen</option>
+          <option>5ml Pen</option>
+          <option>10ml Pen</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-2">
+        <label class="form-label">Dosage</label>
+        <select class="form-select bg-white">
+          <option selected>2mg/3ml</option>
+          <option>1mg/3ml</option>
+          <option>0.5mg/3ml</option>
+        </select>
+      </div>
+      <div class="col-md-3 mb-2">
+        <label class="form-label">Quantity</label>
+        <select class="form-select bg-white">
+          <option selected>1 Count</option>
+          <option>2 Count</option>
+          <option>3 Count</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+
+
+/* ✅ MOBILE styles (unchanged, already correct) */
+@media (max-width: 767.98px) {
+  .choose-pharmacy-box {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+
+  .choose-pharmacy-box .input-group-text:first-child {
+    justify-content: center;
+    width: 100%;
+    border: none !important;
+    background: transparent !important;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #32187D;
+  }
+
+  .choose-pharmacy-box input.form-control {
+    width: 100%;
+    border-radius: 12px !important;
+    border: 1px solid #ccc !important;
+  }
+
+  .mobile-pen {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-10%);
+    color: #32187D;
+    pointer-events: none;
+    font-size: 1rem;
+    opacity: 0.6;
+  }
+}
+
+/* ✅ DESKTOP: shrink input field and align it */
+@media (min-width: 768px) {
+  .choose-pharmacy-box {
+    display: flex;
+    align-items: center;
+  }
+
+  .choose-label {
+    background: transparent !important;
+    border: none !important;
+    white-space: nowrap;
+    margin-right: 12px;
+  }
+
+  .input-wrapper {
+    max-width: 300px; /* 👈 Shrink input field size here */
+    width: 100%;
+    position: relative;
+  }
+
+  .choose-input {
+    padding-right: 2rem;
+    border-radius: 12px !important;
+    width: 105%;
+  }
+
+  .desktop-pen {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #32187D;
+    pointer-events: none;
+    opacity: 0.7;
+    font-size: 1rem;
+  }
+
+  .choose-pharmacy-box .input-group-text:last-child {
+    display: none !important;
+  }
+}
+
+
+</style>
+
+    <!-- Third Row -->
+    <div class="row mob-centric ">
+      <!-- Left Column -->
+
+      <div class="col-md-6 mb-4">
+        <!-- Enhanced Choose Pharmacy Box -->
+
+
+     <div class="input-group choose-pharmacy-box mb-4 p-1 rounded" style="background-color: #f0f0f0;">
+  
+      <!-- Label (always shown) -->
+      <span class="input-group-text bg-transparent border-end-0 choose-label" style="color: #32187D;">
+        <i class="fa fa-location-dot me-2"></i>
+        <span class="fw-semibold">Choose Pharmacy</span>
+      </span>
+    
+      <!-- Input wrapper (with icon inside) -->
+      <div class="input-wrapper w-100 position-relative">
+        <input type="text" 
+               class="form-control bg-white border-start-0 choose-input" 
+               placeholder="John F Kennedy Pkwy, UK" 
+               style="border-radius: 12px;">
+    
+        <!-- Mobile-only pen icon -->
+        <i class="fa fa-pen mobile-pen d-md-none"></i>
+    
+        <!-- Desktop-only pen icon -->
+        <i class="fa fa-pen desktop-pen d-none d-md-inline"></i>
+      </div>
+    
+    </div>
+    
+
+     
+        <!-- Card Options -->
+        <div class="d-flex flex-column gap-3">
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="./Rx/o.png" class="icon-img2 me-2" alt="icon">
+              <span class="text-primary fw-semibold">Costco</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="price-text fw-bold me-2">$964.99</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="./Rx/n.png" class="icon-img2 me-2" alt="icon">
+              <span>Albertsons</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$964.99</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="./Rx/m.png" class="icon-img2 me-2" alt="icon">
+              <span>Rite Aid</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,002</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="./Rx/k.png" class="icon-img2 me-2" alt="icon">
+              <span>Walgreens</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,029</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+      
+          <div class="card-option d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+              <img src="./Rx/l.png" class="icon-img2 me-2" alt="icon">
+              <span>CVS Pharmacy</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <span class="fw-bold me-2">$1,015</span>
+              <i class="fa fa-chevron-right"></i>
+            </div>
+          </div>
+          
+
+          
+
+        </div>
+      </div>     
+      
+      <!-- Right Column -->
+   
+  <div class="col-md-6 d-flex flex-column justify-content-between">
+    <!-- Full-width badge-style buttons -->
+    <div class="badge-wrapper d-flex mb-3 w-100">
+      <span class="badge-btn left-btn flex-fill text-center">Saving card</span>
+      <span class="badge-btn right-btn flex-fill text-center">More Option</span>
+    </div>
+  
+    <!-- Price Card -->
+    <div class="price-card text-center">
+      <h1 class="heading display-5 fw-bold mb-3">$25</h1>
+      <p class="fw-semibold">For OZEMPIC injection 0.5 mg, 1 mg, or 2 mg</p>
+    </div>
+  
+    <!-- CTA Button -->
+    <button class="btn btn-custom2 w-100 my-3">Get started  <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon"></button>
+  
+   
+
+    <div class="info-container">
+      <ul class="info-list list-unstyled text-start mt-2">
+        <li><i class="fa fa-check-circle"></i> Maximum savings of $100 per 1-month, $200 per 2-month, or $300 per 3-month supply</li>
+        <li><i class="fa fa-check-circle"></i> Month defined as 28 days, offer good for up to 48 months</li>
+        <li><i class="fa fa-check-circle"></i> For eligible, commercially insured patients whose insurance covers Ozempic<sup>&reg;</sup></li>
+      </ul>
+    
+      <!-- Additional Text -->
+      <p class="info-footer">© 2024 Novo Nordisk All rights reserved. US24OZM00873</p>
+    
+      <!-- Small Image below Text -->
+      <img src="./Rx/image 32.png" alt="Novo Nordisk" class="footer-image">
+    </div>
+    
+  </div>
+  
+
+    </div>
+  </div>
+
+
+  <style>
+
+
+@media (max-width: 767.98px) {
+  .nav-scroll-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    padding: 0 10px; /* Add padding so items don’t get clipped */
+  }
+
+  .nav-scroll-wrapper ul.nav {
+    flex-wrap: nowrap !important;
+    display: inline-flex;
+    min-width: max-content;
+  }
+
+  .nav-scroll-wrapper .nav-item {
+    flex-shrink: 0;
+  }
+
+  /* Transparent scrollbar */
+  .nav-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+    background: transparent;
+  }
+  .nav-scroll-wrapper {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.nav-scroll-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+  .nav-scroll-wrapper::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+  }
+
+  .nav-scroll-wrapper {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.08) transparent;
+  }
+}
+
+    
+    
+    </style>
+    
+
+     <!-- Bootstrap 5 Accordion & Nav Layout Section -->
+      
+     <section class="" style=" font-family: 'Segoe UI', sans-serif;">
+      <div class="container">
+    
+       
+
+        <!-- Wrapper for horizontal scroll (only on mobile) -->
+<div class="nav-scroll-wrapper">
+  <ul class="nav nav-pills justify-content-center mb-4 flex-nowrap custom-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" href="#">Prices</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Medicare</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Drug Info</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Learn about brand-name medications</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Side Effect</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Image</a>
+    </li>
+  </ul>
+</div>
+
+    
+        <!-- Section Title -->
+        <h5 class="fw-bold mb-4 text-center" style="color:#32187D;">
+          Common question about Ozempic pricing
+        </h5>
+    
+        <!-- Bootstrap 5 Accordion -->
+        <div class="accordion" id="ozempicAccordion">
+          <div class="accordion-item border-top">
+            <h2 class="accordion-header" id="headingOne">
+              <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                How much is Ozempic without insurance?
+              </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+              <div class="accordion-body">
+                The price varies but can be quite high without insurance.
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item border-top">
+            <h2 class="accordion-header" id="headingTwo">
+              <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                Does Ozempic have a Manufacturer Coupon?
+              </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+              <div class="accordion-body">
+                Yes, some coupons may be available via official site or partners.
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item border-top">
+            <h2 class="accordion-header" id="headingThree">
+              <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                Is there a generic for Ozempic?
+              </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+              <div class="accordion-body">
+                No generic is currently available for Ozempic.
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item border-top">
+            <h2 class="accordion-header" id="headingFour">
+              <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                How can I save on Ozempic?
+              </button>
+            </h2>
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+              <div class="accordion-body">
+                Try savings cards, discount programs, or ask your provider.
+              </div>
+            </div>
+          </div>
+    
+          <div class="accordion-item border-top">
+            <h2 class="accordion-header" id="headingFive">
+              <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                Does Ozempic have a Patient Assistance Program?
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#ozempicAccordion">
+              <div class="accordion-body">
+                Yes, eligible users can apply through Novo Nordisk support.
+              </div>
+            </div>
+          </div>
+        </div>
+    
+      </div>
+    
+      <!-- Custom Hover Styles -->
+      <style>
+        .custom-tabs .nav-link {
+          color: #32187D;
+          font-weight: 500;
+          border-radius: 0;
+        }
+    
+        .custom-tabs .nav-link.active,
+        .custom-tabs .nav-link:hover,
+        .custom-tabs .nav-link:focus {
+          color: #11E1D5;
+          background-color: transparent;
+          border-bottom: 2px solid #11E1D5;
+        }
+    
+        .custom-accordion-btn {
+          color: #32187D;
+          font-weight: 500;
+          background-color: #fff;
+          box-shadow: none;
+        }
+    
+        .custom-accordion-btn:hover,
+        .custom-accordion-btn:focus {
+          /* color: #11E1D5; */
+          background-color: #f5faff;
+        }
+      </style>
+    
+     
+     
+    </section>
+    
+    
+
+
+       <section class="py-5">
+        <div class="container">
+          <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5>
+
+<!--           
+
+          <div class="row g-4 mb-5">
+        
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Ozempic is a brand-name medication</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
+                </div>
+              </div>
+            </div>
+      
+         
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+          
+
+          <div class="row g-4 mb-5">
+            <!-- CARD 1 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/a.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D; min-height: 48px;">
+                    Ozempic is a brand-name medication
+                  </h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">
+                    Rx Discount Hub prescriptions by finding the best local discounts.
+                  </p>
+                </div>
+              </div> 
+            </div>
+          
+            <!-- CARD 2 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/b.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D; min-height: 48px;">
+                    Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy
+                  </h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">
+                    Rx Discount Hub prescriptions by finding
+                  </p>
+                </div>
+              </div>
+            </div>
+          
+            <!-- CARD 3 -->
+            <div class="col-md-4 d-flex">
+              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
+                <img src="./Rx/c.png" class="card-img-top mb-3" alt="Image">
+                <div class="d-flex flex-column flex-grow-1">
+                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D; min-height: 48px;">
+                    10 long term side effect of wegovy you should know about before you start taking it
+                  </h6>
+                  <p class="card-text mt-auto mb-0" style="color: #32178D;">
+                    Rx Discount Hub prescriptions by finding
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+
+      
+        <div class="container">
+          <div class="row g-3">
+     
+            <h5 class="fw-bold mb-2 text-md-start text-center" style="color: #32178D;">Other GLP-1 agonists</h5>
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100">
+                <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Adlyxin</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100">
+                <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Bydureon</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100">
+                <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Byetta</span>
+              </div>
+            </div>
+            <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100">
+                <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+  
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Rybelsus</span>
+              </div>
+            </div>
+            <!-- <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100">
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Saxenda</span>
+              </div>
+            </div> -->
+  
+            <div class="col-6 col-sm-4 col-md-2">
+              <divv class="col-6 col-sm-4 col-md-2">
+                <div class="card shadow text-center p-3 border-0 h-100">
+                  <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+    
+                  <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                  <span style="color: #32178D;">Saxenda</span>
+                </div>
+            
+            </div>
+            <!-- <div class="col-6 col-sm-4 col-md-2">
+              <div class="card shadow text-center p-3 border-0 h-100 position-relative"
+                <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+                <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                <span style="color: #32178D;">Tanzeum</span>
+              </div> -->
+  
+              <div class="col-6 col-sm-4 col-md-2">
+                <div class="card shadow text-center p-3 border-0 h-100">
+                  <i class="fa-solid fa-arrow-up-right-from-square position-absolute" style="top: 8px; right: 8px; color: #32178D;"></i>
+    
+                  <img src="./Rx/p.png" class="mx-auto mb-2" style="width: 32px; height: 32px;" alt="icon">
+                  <span style="color: #32178D;">Tanzeum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+    </div>
+      </section>
+      
+
+
+<!-- my css broese -->
+
+
+<style>
+
+
+  body {
+      /* font-family: Arial, sans-serif; */
+  }
+  /* .top-articles {
+      background-color: #f8f9fa; 
+      padding: 30px 0;
+  } */
+
+
+  .top-articles {
+background-color: #f8f9fa;
+/* padding-top: 20px;   */
+padding-bottom: 40px; 
+border-top-left-radius: 40px;
+border-top-right-radius: 40px;
+}
+  .section-title {
+      color: #32187D;
+      font-weight: 600;
+      margin-bottom: 0; /* No extra gap */
+  }
+  .card {
+      border: none;
+      border-radius: 10px;
+      overflow: hidden;
+      background: white;
+      height: 100%; /* Ensure equal card height */
+  }
+  .card img {
+      width: 100%;
+      height: auto;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+  .card-body {
+      color: #32187D;
+      text-align: left;
+      padding: 15px;
+     
+  }
+  .card-body h5 {
+font-size: 16px;
+font-weight: bold;
+
+}
+.card {
+display: flex;
+flex-direction: column;
+height: 100%; /* Ensures equal height */
+}
+
+.card-body {
+flex-grow: 1; /* Makes all cards the same height */
+}
+
+  .card-body hr {
+      border: none;
+      height: 2px;
+      background: #444; /* Dark HR */
+      width: 100%;
+      margin: 10px 0;
+  }
+  .date-badge {
+      background-color: #ddd; /* Light Gray */
+      color: black;
+      font-size: 12px;
+      padding: 5px 10px;
+      border-radius: 20px;
+      display: inline-block;
+  }
+  .trending-topics {
+      background-color: white;
+      padding: 30px 0 20px 0; /* Reduced bottom padding */
+  }
+  .trending-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+  .badge-custom {
+      color: gray;
+      border: 1px solid gray;
+      background-color: white;
+      padding: 12px 20px; /* Increased size */
+      border-radius: 20px;
+      font-size: 14px;
+      text-align: center;
+      flex: 1; /* Makes them stretch evenly */
+      text-wrap: nowrap;
+  }
+  .badge-custom:hover {
+      background-color: #f1f1f1;
+  }
+  /* .browse-medications {
+      padding: 20px 0; 
+  } */
+
+ 
+ .browse-medications {
+    margin-top: -30px;  /* Reduced upper space */
+    padding-bottom: 20px; /* Keep bottom space as is */
+}
+            .hr-divider {
+                border: none;
+                height: 2px;
+                background: #ccc6c4;
+                width: 86%; /* Container width */
+                margin: 20px auto;
+            }
+            .alphabet-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 15px;
+                margin-top: 20px;
+                justify-content: flex-start;
+            }
+            .alphabet-container a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-decoration: none;
+                color: #002677;
+                font-size: 16px; /* Increased font size */
+                width: 50px; /* Increased size */
+                height: 48px; /* Increased size */
+                border-radius: 50%;
+                border: 0.5px solid #002677;
+                background: transparent;
+                transition: all 0.3s ease;
+            }
+            .alphabet-container a:hover {
+                background-color: #11E1D5;
+                color: white;
+            }
+           .section-title{
+              
+               font-size: 25px;
+           }
+
+          
+
+           @media (max-width:575px) {
+            .alpha-section {
+                font-size: 15px; /* Reduced font size for mobile */
+                 padding-top: 15px;
+              
+                
+            }
+
+            .section-custom{
+                   margin-top: -42px;
+                  padding-bottom: 14px;
+            }
+           }
+</style>
+
+
+    <!-- Browse Medications Section -->
+    <div class="browse-medications ">
+      <div class="container">
+          <h2 class="section-title text-md-start text-center">Browse medications</h2>
+          <p class="alpha-section" >Research prescriptions and over-the-counter medication from A to Z, compare drug prices, and start saving.</p>
+          <div class="alphabet-container  justify-content-center justify-content-md-start">
+              <a href="#">A</a>
+              <a href="#">B</a>
+              <a href="#">C</a>
+              <a href="#">D</a>
+              <a href="#">E</a>
+              <a href="#">F</a>
+              <a href="#">G</a>
+              <a href="#">H</a>
+              <a href="#">I</a>
+              <a href="#">J</a>
+              <a href="#">K</a>
+              <a href="#">L</a>
+              <a href="#">M</a>
+              <a href="#">N</a>
+              <a href="#">O</a>
+              <a href="#">P</a>
+              <a href="#">Q</a>
+              <a href="#">R</a>
+              <a href="#">S</a>
+              <a href="#">T</a>
+              <!-- Next row starts here -->
+              <a href="#">U</a>
+              <a href="#">V</a>
+              <a href="#">W</a>
+              <a href="#">X</a>
+              <a href="#">Y</a>
+              <a href="#">Z</a>
+          </div>
+      </div>
+  </div>
+  
+<!-- Footer Section -->
+
+     
+<style>
+  /* Main Footer */
+
+  .footer ul li {
+padding-bottom: 16px; /* space between list items */
+}
+
+.icon-img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  display: inline-block;
+}
+
+.footer{
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+
+.footer ul li:last-child {
+padding-bottom: 0; /* remove bottom padding on last item */
+}
+  .footer {
+    background-color: #5232AF;
+    color: white;
+    padding: 70px 0 20px 0;
+  }
+  .footer h5 {
+    color: #11E1D5;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  .footer a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  .footer a:hover {
+    color: #11E1D5;
+  }
+  .footer-logo {
+    width: 120px;
+    margin-bottom: 20px;
+  }
+  .social-icons a {
+    color: white;
+    margin-right: 15px;
+    font-size: 20px;
+    transition: 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #11E1D5;
+  }
+
+  /* Sub-Footer */
+
+  /* .sub-footer {
+    background-color: #4F2FAC;
+    padding: 20px 0;
+    color: white;
+  } */
+
+  /* .footer-inner {
+width: 95%;
+margin: 0 auto;
+padding: 10px;
+border-radius: 20px;
+background-color: #5A41A4; 
+} */
+
+.sub-footer {
+background-color:  #4521AB;
+color: white;
+padding: 25px 0;
+/* margin-bottom: 30px; */
+}
+
+
+.footer-inner {
+width: 97%;
+margin: 0 auto;
+padding: 45px 20px; /* Add more padding at the top and bottom */
+border-radius: 20px;
+background-color: #4b2ea0;
+display: flex;
+flex-direction: column;
+justify-content: space-between; /* Ensures equal space at top and bottom */
+align-items: center; /* Center content horizontally */
+min-height: 170px; /* Ensure a minimum height */
+}
+
+   .subscribe-box input {
+    border-radius: 50px;
+    padding: 8px 15px;
+    border: none;
+    width:74%;
+  }
+  .subscribe-box button {
+    border-radius: 50px;
+    background-color: #11E1D5;
+    border: none;
+    color: black;
+    padding: 8px 20px;
+    margin-left: 10px;
+  }
+  .subscribe-box button:hover {
+    background-color: #0bb3a5;
+  } 
+   
+  .footer-bottom-nav {
+    background-color: #eee;
+    color: black;
+    padding: 15px 0;
+    font-size: 14px;
+  }
+  .footer-bottom-nav i {
+    margin-right: 5px;
+    color: #5232AF;
+  }
+  @media (max-width: 768px) {
+    .subscribe-box {
+      flex-direction: column;
+    }
+    .subscribe-box input,
+    .subscribe-box button {
+      width: 100%;
+      margin: 5px 0;
+    }
+  }
+
+
+</style>
+
+<!-- Footer Section -->
+
+<style>
+
+
+/* Underline on accordion headers */
+.custom-accordion .accordion-button {
+  border-bottom: 1px solid white !important;
+  padding-bottom: 10px;
+}
+
+.custom-accordion .accordion-button:not(.collapsed) {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.custom-accordion .accordion-button::after {
+  filter: brightness(0) invert(1); /* turns arrow icon white */
+}
+</style>
+
+<footer>
+<!-- Main Footer -->
+
+
+ <!-- Desktop Footer (visible only on lg and above) -->
+<div class="footer d-none d-lg-block" style="background-color: #4521AB; color: white; ">
+<div class="container">
+  <div class="row">
+  
+    <div class="col-md-3  mb-4 mb-md-0">
+      <img src="./Rx/Group 1041.png" alt="Logo" class="footer-logo mb-2" style="width: 30px;">
+      <h5 class="text-info">RX Discount HUb</h5>
+      <ul class="list-unstyled">
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Press</a></li>
+        <li><a href="#">Clinical Trial Recruitment</a></li>
+        <li><a href="#">Career</a></li>
+        <li><a href="#">Health Blog</a></li>
+      </ul>
+    </div>
+
+   
+    <div class="col-md-3 mb-4 mb-md-0">
+      <div class="mb-2">
+       
+        <img src="./Rx/Vector.png" alt="Pills Icon" class="icon-img">
+      </div>
+      <h5 class="text-info">Browse drugs by</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a href="#">Condition Symptoms</a></li>
+        <li><a href="#">Clinical Treatment</a></li>
+        <li><a href="#">Drug Classes</a></li>
+        <li><a href="#">Drug Resource Center</a></li>
+        <li><a href="#">Popular Drugs</a></li>
+      </ul>
+    </div>
+
+   
+    <div class="col-md-3 mb-4 mb-md-0">
+      <div class="mb-2">
+        <i class="fa fa-shield-halved fa-2x text-white"  style="font-size: 26px;"></i>
+      </div>
+      <h5 class="text-info">Legal</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Privacy Center</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Site Disclaimer</a></li>
+        <li><a href="#">Collection Notice</a></li>
+        <li><a href="#">Cookie Preferences</a></li>
+        <li><a href="#">Your Privacy Choices</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-3">
+      <div class="mb-2">
+        <i class="fa fa-headset fa-2x text-white"  style="font-size: 26px;"></i>
+      </div>
+      <h5 class="text-info">Support</h5>
+      <ul class="list-unstyled mt-3">
+        <li><a href="#">Help & FAQ</a></li>
+        <li><a href="#">Accessibility</a></li>
+      </ul>
+
+      <div class="mt-4 mb-2">
+     
+      </div>
+      <h5 class="text-info">Customers</h5>
+      <p class="mt-2">1234-5678-9086</p>
+
+      <div class="mt-4 mb-2">
+     
+      </div>
+      <h5 class="text-info">General</h5>
+      <p><a href="mailto:support@rxdiscounthub.com">support@rxdiscounthub.com</a></p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- Mobile & Tablet Footer (Accordion view) -->
+<div class="footer d-block d-lg-none" style="background-color: #4521AB; color: white; padding: 50px 0; margin-bottom: -28px;">
+<div class="container">
+  <div class="accordion" id="footerAccordion">
+
+    <!-- Section 1 -->
+     <div class="custom-accordion">
+    <div class="accordion-item bg-transparent border-0">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-transparent text-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          RX Discount Hub
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body text-white">
+          <ul class="list-unstyled">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Clinical Trial Recruitment</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">Health Blog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+     </div>
+    <!-- Section 2 -->
+    <div class="custom-accordion">
+    <div class="accordion-item bg-transparent border-0">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-transparent text-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          Browse drugs by
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body text-white">
+          <ul class="list-unstyled">
+            <li><a href="#">Condition Symptoms</a></li>
+            <li><a href="#">Clinical Treatment</a></li>
+            <li><a href="#">Drug Classes</a></li>
+            <li><a href="#">Drug Resource Center</a></li>
+            <li><a href="#">Popular Drugs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Section 3 -->
+    <div class="custom-accordion">
+    <div class="accordion-item bg-transparent border-0">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-transparent text-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+          Legal
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body text-white">
+          <ul class="list-unstyled">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Privacy Center</a></li>
+            <li><a href="#">Terms of Use</a></li>
+            <li><a href="#">Site Disclaimer</a></li>
+            <li><a href="#">Collection Notice</a></li>
+            <li><a href="#">Cookie Preferences</a></li>
+            <li><a href="#">Your Privacy Choices</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- Section 4 -->
+    <div class="custom-accordion">
+    <div class="accordion-item bg-transparent border-0">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed bg-transparent text-info" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+          Support & Contact
+        </button>
+      </h2>
+      <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#footerAccordion">
+        <div class="accordion-body text-white">
+          <ul class="list-unstyled">
+            <li><a href="#">Help & FAQ</a></li>
+            <li><a href="#">Accessibility</a></li>
+          </ul>
+          <h6 class="text-info mt-3">Customers</h6>
+          <p class="m-0">1234-5678-9086</p>
+          <h6 class="text-info mt-3">General</h6>
+          <p class="m-0"><a href="mailto:support@rxdiscounthub.com">support@rxdiscounthub.com</a></p>
+        </div>
+      </div>
+    </div>
+     </div>
+  </div>
+</div>
+</div>
+
+<!-- Sub-Footer Section -->
+<div class="sub-footer" style=" color: white;">
+  <div class="footer-inner"> <!-- NEW WRAPPER WITH BORDER-RADIUS -->
+    <div class="container">
+      <div class="row align-items-center text-center text-md-start">
+        
+        <div class="col-md-7 mb-4 mb-md-2">
+          <h6 class="mb-2" style="color: #11E1D5; font-size: 20px;">Sign up for our newsletter</h6>
+          <form class="d-flex flex-wrap justify-content-center justify-content-md-start align-items-center gap-2 subscribe-box">
+            <input type="email" class="form-control" placeholder="Email address" />
+            <button type="submit" class="btn">
+              <i class="fa fa-paper-plane me-2"></i>Subscribe
+            </button>
+          </form>
+        </div>
+  
+        <div class="col-md-5 text-md-end" style="font-size: 13px;">
+          <div class="d-flex flex-column align-items-center align-items-md-end gap-2">
+            <div>
+              <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+              <span class="ms-md-2">English (United States) <i class="fa fa-globe ms-1"></i></span>
+            </div>
+            <p class="mb-0">Copyright &copy; 2025 Rx Discount Hub, Inc.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
