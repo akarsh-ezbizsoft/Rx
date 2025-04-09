@@ -183,12 +183,15 @@
 }
 
 .choose-pharmacy-box input {
-    padding: 12px 15px;  /* Increased padding inside the input */
+    padding: 6px 15px;  /* Increased padding inside the input */
     border: none;  /* Remove border from the input */
     border-radius: 8px 0 0 8px;  /* Ensures rounded corners for input */
     
 }
 
+.choose-pharmacy-box {
+  padding: 1px!important; /* Remove padding from the box */
+}
 .choose-pharmacy-box input::placeholder {
     color: #6c757d;
 }
@@ -532,6 +535,8 @@ margin-left: 5px;
 
 </div>
 
+
+
 <style>
 
 @media (max-width: 767.98px) {
@@ -826,6 +831,7 @@ margin-left: 5px;
    
   <div class="col-md-6 d-flex flex-column justify-content-between">
     <!-- Full-width badge-style buttons -->
+
     <div class="badge-wrapper d-flex mb-3 w-100">
       <span class="badge-btn left-btn flex-fill text-center">Saving card</span>
       <span class="badge-btn right-btn flex-fill text-center">More Option</span>
@@ -914,15 +920,54 @@ margin-left: 5px;
     </style>
     
 
+    <style>
+      .custom-full-bg {
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        background-color: #f7f7f4;
+      }
+    </style>
+      <!-- Custom Hover Styles -->
+  <style>
+    .custom-tabs .nav-link {
+      color: #32187D;
+      font-weight: 500;
+      border-radius: 0;
+    }
+
+    .custom-tabs .nav-link.active,
+    .custom-tabs .nav-link:hover,
+    .custom-tabs .nav-link:focus {
+      color: #11E1D5;
+      background-color: transparent;
+      border-bottom: 2px solid #11E1D5;
+    }
+
+    .custom-accordion-btn {
+      color: #32187D;
+      font-weight: 500;
+      background-color: #fff;
+      box-shadow: none;
+    }
+
+    .custom-accordion-btn:hover,
+    .custom-accordion-btn:focus {
+      /* color: #11E1D5; */
+      background-color: #f5faff;
+    }
+  </style>
+
+
      <!-- Bootstrap 5 Accordion & Nav Layout Section -->
       
-     <section class="" style=" font-family: 'Segoe UI', sans-serif;">
-      <div class="container">
-    
-       
-
+     <section class="custom-full-bg py-5" style=" font-family: 'Segoe UI', sans-serif; " >
+      <div class="container" style="background-color: #f7f7f4;">
         <!-- Wrapper for horizontal scroll (only on mobile) -->
-<div class="nav-scroll-wrapper">
+<div class="nav-scroll-wrapper" style="background-color: #f7f7f4;">
   <ul class="nav nav-pills justify-content-center mb-4 flex-nowrap custom-tabs">
     <li class="nav-item">
       <a class="nav-link active" href="#">Prices</a>
@@ -945,14 +990,15 @@ margin-left: 5px;
   </ul>
 </div>
 
-    
+
+
         <!-- Section Title -->
-        <h5 class="fw-bold mb-4 text-center" style="color:#32187D;">
+        <h5 class="fw-bold mb-4 text-center" style="color:#32187D; ">
           Common question about Ozempic pricing
         </h5>
     
         <!-- Bootstrap 5 Accordion -->
-        <div class="accordion" id="ozempicAccordion">
+        <div class="accordion" id="ozempicAccordion" style="background-color: #f7f7f4;">
           <div class="accordion-item border-top">
             <h2 class="accordion-header" id="headingOne">
               <button class="accordion-button collapsed custom-accordion-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
@@ -1021,82 +1067,19 @@ margin-left: 5px;
     
       </div>
     
-      <!-- Custom Hover Styles -->
-      <style>
-        .custom-tabs .nav-link {
-          color: #32187D;
-          font-weight: 500;
-          border-radius: 0;
-        }
-    
-        .custom-tabs .nav-link.active,
-        .custom-tabs .nav-link:hover,
-        .custom-tabs .nav-link:focus {
-          color: #11E1D5;
-          background-color: transparent;
-          border-bottom: 2px solid #11E1D5;
-        }
-    
-        .custom-accordion-btn {
-          color: #32187D;
-          font-weight: 500;
-          background-color: #fff;
-          box-shadow: none;
-        }
-    
-        .custom-accordion-btn:hover,
-        .custom-accordion-btn:focus {
-          /* color: #11E1D5; */
-          background-color: #f5faff;
-        }
-      </style>
     
      
      
     </section>
     
+
     
 
 
-       <section class="py-5">
+       <section class="  custom-full-bg" style="background-color: #f7f7f4;">
         <div class="container">
           <h5 class="fw-bold mb-4" style="color: #32178D;">Read more about Ozempic</h5>
 
-<!--           
-
-          <div class="row g-4 mb-5">
-        
-            <div class="col-md-4 d-flex">
-              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
-                <img src="./Rx/image-1.png" class="card-img-top mb-3" alt="Image">
-                <div class="d-flex flex-column flex-grow-1">
-                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Ozempic is a brand-name medication</h6>
-                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding the best local discounts.</p>
-                </div>
-              </div>
-            </div>
-      
-         
-            <div class="col-md-4 d-flex">
-              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
-                <img src="./Rx/image-2.png" class="card-img-top mb-3" alt="Image">
-                <div class="d-flex flex-column flex-grow-1">
-                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">Live update: tracking insurance coverage for GIP and GLP-1 Agonist like wegovy</h6>
-                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
-                </div>
-              </div>
-            </div>
-      
-            <div class="col-md-4 d-flex">
-              <div class="card shadow border-0 w-100 d-flex flex-column h-100 p-3">
-                <img src="./Rx/image3.png" class="card-img-top mb-3" alt="Image">
-                <div class="d-flex flex-column flex-grow-1">
-                  <h6 class="card-title fw-semibold mb-2" style="color: #32178D;">10 long term side effect of wegovy you should know about before you start taking it</h6>
-                  <p class="card-text mt-auto mb-0" style="color: #32178D;">Rx Discount Hub prescriptions by finding</p>
-                </div>
-              </div>
-            </div>
-          </div> -->
 
           
 
@@ -1222,14 +1205,10 @@ margin-left: 5px;
     </div>
       </section>
       
+   
 
-
-<!-- my css broese -->
-
-
+<!-- my css browse medication -->
 <style>
-
-
   body {
       /* font-family: Arial, sans-serif; */
   }
@@ -1390,7 +1369,7 @@ flex-grow: 1; /* Makes all cards the same height */
 
 
     <!-- Browse Medications Section -->
-    <div class="browse-medications ">
+    <div class="browse-medications py-5">
       <div class="container">
           <h2 class="section-title text-md-start text-center">Browse medications</h2>
           <p class="alpha-section" >Research prescriptions and over-the-counter medication from A to Z, compare drug prices, and start saving.</p>
