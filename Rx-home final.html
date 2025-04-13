@@ -1,19 +1,23 @@
+
+
 <!DOCTYPE html>
-<di lang="en">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Rx Discount Hub</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Rx Discount Hub</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 
+    
     <style>
       html,body{
      
@@ -291,12 +295,12 @@ margin-left: 5px;
     color: black;
 }
 
-.search-bar button {
+.search-bar button{
     background-color: #11E1D5;
     color: #32187D;
     border-radius: 20px;
     padding: 8px 15px;
-    border: none;
+    border: 0px solid transparent!important;
     margin-left: 10px;
     font-weight: 500;
     display: flex;
@@ -331,7 +335,7 @@ margin-left: 5px;
 .input-wrapper {
     display: flex;
     align-items: center;
-    background-color: #f8f8f8;
+    /* background-color: #f8f8f8; */
     border-radius: 30px;
     padding: 6px 12px;
     flex: 1;
@@ -374,13 +378,14 @@ margin-left: 5px;
     font-size: 13px;
   }
 
-  .search-bar button {
+  .search-bar button{
     width: 70%;
     padding: 10px 14px;
     font-size: 13px;
     border-radius: 25px;
     justify-content: center;
     margin: 0 auto;
+    border: 0px solid transparent!important;
   }
 
   .search-bar .corner-icon {
@@ -644,9 +649,8 @@ color: white;" class="pt-3">
         <input type="text" placeholder="Enter drug name (ex. Amoxicillin)">
     </div>
 
-    <button>
-        Find lowest prices 
-        <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon">
+    <button><a href="./Rx-payment2.html" style="text-decoration: none; color:#32187D; border: 0px solid transparent!important;"> Find lowest prices 
+      <img src="./Rx/akar-icons_arrow-up.png" alt="Arrow" class="arrow-icon"> </a>
     </button>
 
     <img src="./Rx/iconB.png" alt="Corner Icon" class="corner-icon">
@@ -1048,9 +1052,9 @@ color: white;" class="pt-3">
         /* Bottom-right curve line */
         .curve-right {
             position: absolute;
-            left: 473px;
-            bottom: -94px;
-            width: 133%;
+            left: 475px;
+            bottom: -57px;
+            width: 270%;
         }
        
         @media (max-width: 768px) {
@@ -1089,7 +1093,7 @@ color: white;" class="pt-3">
   
       <!-- DESKTOP LAYOUT: Show Image First -->
       <div class="col-lg-6 d-none d-lg-block text-center text-lg-start" data-aos="fade-left" data-aos-delay="300">
-        <img src="./Rx/3.png" alt="Discount Coupons" class="discount-img img-fluid mb-3">
+        <img src="./Rx/discount.png" alt="Discount Coupons" class="discount-img img-fluid mb-3">
         <img src="./Rx/line-2.png" alt="Curve Right" class="curve-right img-fluid">
       </div>
   
@@ -1124,14 +1128,37 @@ color: white;" class="pt-3">
 
 
 
-<!-- common condition section -->
+<!-- common condition card slick section -->
 
 <style>
     .bg-section {
         background: url('./Rx/background.png') no-repeat center center fixed;
         background-size: cover;
+        position: relative; /* ✅ add this */
+    padding-bottom: 8px ; 
     }
+    .custom-card-slick .slick-dots {
+    position: absolute;
+    bottom: -12px;
+   
+    width: 100%;
+    color: #11e1d5 !important;
+    
+}
 
+
+/* Dot color normal */
+.custom-card-slick .slick-dots li button:before {
+    color: #32187D !important;
+    font-size: 10px;
+    opacity: 0.5;
+}
+
+/* Dot color active */
+.custom-card-slick .slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: #11E1D5 !important;
+}
     .main-heading-custom {
         font-size: 25px;
         color: white;
@@ -1152,7 +1179,7 @@ color: white;" class="pt-3">
         text-align: center;
         color: #32187D;
         padding: 10px; /* Reduced padding */
-        /* width: 220px;  */
+        width: 240px; 
         margin: auto;
     }
 
@@ -1177,8 +1204,11 @@ color: white;" class="pt-3">
     .custom-card img {
         width: 40px; /* Reduced icon size */
         height: 40px;
-    }
-
+        display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+   
     .custom-card-title {
         font-size: 16px;
     }
@@ -1192,28 +1222,32 @@ color: white;" class="pt-3">
         border-top: 1px solid gray;
     }
 
-    .rotate-card {
+    /* .rotate-card {
         transform: rotate(10deg);
-    }
+    } */
 </style>
 
+<!-- common condition card slick section -->
+
+<!-- 
 <div class="container-fluid bg-section">
     <div class="container text-center mt-5">
         <h1 class="main-heading-custom">Common Conditions Savings With</h1>
         <h2 class="sub-heading-custom">RX Discount Hub</h2>
         <div class="row mt-5" style="padding-bottom: 2rem;">
             <div class="col-md-3 col-sm-6 mb-4">
-                <!-- <div class="custom-card p-3 "> -->
+               
                     <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
 
                     <img src="./Rx/i4.png" alt="Depression Icon">
+                  
                     <h5 class="custom-card-title pt-2">Depression</h5>
                     <hr>
                     <p class="custom-card-text">90% average discount</p>
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
-                <!-- <div class="custom-card p-3"> -->
+              
                     <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
 
                     <img src="./Rx/i3.png" alt="Erectile Dysfunction Icon">
@@ -1224,7 +1258,7 @@ color: white;" class="pt-3">
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="custom-card p-3 rotate-card">
-                    <!-- <div class="custom-card p-3  rotate-card" data-aos="flip-left" data-aos-delay="200"> -->
+                  
 
                     <img src="./Rx/i2.png" alt="Hypertension Icon">
                     <h5 class="custom-card-title pt-2">Hypertension</h5>
@@ -1233,7 +1267,7 @@ color: white;" class="pt-3">
                 </div>
             </div>
             <div class="col-md-3 col-sm-6 mb-4">
-                <!-- <div class="custom-card p-3"> -->
+                
                     <div class="custom-card p-3  " data-aos="flip-left" data-aos-delay="200">
                     <img src="./Rx/i1.png" alt="Weight Loss Icon">
                     <h5 class="custom-card-title pt-2">Weight Loss</h5>
@@ -1243,9 +1277,89 @@ color: white;" class="pt-3">
             </div>
         </div>
     </div>
+</div> -->
+
+
+<div class="container-fluid bg-section">
+  <div class="container text-center mt-5">
+      <h1 class="main-heading-custom">Common Conditions Savings With</h1>
+      <h2 class="sub-heading-custom">RX Discount Hub</h2>
+      
+      <!-- 👇 Just add this custom class -->
+      <div class="row custom-card-slick mt-5" style="padding-bottom: 2rem;">
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/i4.png" alt="Depression Icon" >
+                  <h5 class="custom-card-title pt-2">Depression</h5>
+                  <hr>
+                  <p class="custom-card-text">90% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/i3.png" alt="Erectile Dysfunction Icon">
+                  <h5 class="custom-card-title pt-2">Erectile Dysfunction</h5>
+                  <hr>
+                  <p class="custom-card-text">42% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3">
+                  <img src="./Rx/i2.png" alt="Hypertension Icon">
+                  <h5 class="custom-card-title pt-2">Hypertension</h5>
+                  <hr>
+                  <p class="custom-card-text">50% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/i1.png" alt="Weight Loss Icon">
+                  <h5 class="custom-card-title pt-2">Weight Loss</h5>
+                  <hr>
+                  <p class="custom-card-text">52% average discount</p>
+              </div>
+          </div>
+
+          <!-- 4 more duplicated cards -->
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/Group 964.png" alt="Depression Icon">
+                  <h5 class="custom-card-title pt-2">ADHD</h5>
+                  <hr>
+                  <p class="custom-card-text">90% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/PicsArt_04-09-11.20.07.png" alt="Erectile Dysfunction Icon">
+                  <h5 class="custom-card-title pt-2">Birth Control</h5>
+                  <hr>
+                  <p class="custom-card-text">42% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3 rotate-card">
+                  <img src="./Rx/Group 963.png"alt="Hypertension Icon">
+                  <h5 class="custom-card-title pt-2">Bipolar Disorder</h5>
+                  <hr>
+                  <p class="custom-card-text">40% average discount</p>
+              </div>
+          </div>
+          <div class="col-md-3 col-sm-6 mb-4">
+              <div class="custom-card p-3" data-aos="flip-left" data-aos-delay="200">
+                  <img src="./Rx/Group 962.png" alt="Weight Loss Icon">
+                  <h5 class="custom-card-title pt-2">Dog Health</h5>
+                  <hr>
+                  <p class="custom-card-text">60% average discount</p>
+              </div>
+          </div>
+      </div>
+  </div>
 </div>
 
-<!-- footer bottom section -->
+
+<!-- 
+footer bottom section -->
         <style>
             body {
                 /* font-family: Arial, sans-serif; */
@@ -1876,11 +1990,12 @@ flex-grow: 1; /* Makes all cards the same height */
 
 
 
-      <!-- Footer Section -->
+   
 
       
     
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({
@@ -1891,8 +2006,40 @@ flex-grow: 1; /* Makes all cards the same height */
   });
 </script>
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    $('.custom-card-slick').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      dots: true,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1
+          }
+        }
+      ]
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+
 </body>
 </html>
